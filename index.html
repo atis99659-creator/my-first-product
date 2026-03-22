@@ -9,16 +9,21 @@
 <body>
 
     <header>
-        <h1>🌏 Culture Guide</h1>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
-            Switch Theme
-        </button>
+        <h1 id="pageTitle">🌏 Culture Guide</h1>
+        <div class="controls">
+            <button id="langToggle" class="lang-toggle" aria-label="Switch Language">
+                English
+            </button>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                Switch Theme
+            </button>
+        </div>
     </header>
 
-    <nav>
-        <button class="nav-btn active" data-country="korea">🇰🇷 Korea</button>
-        <button class="nav-btn" data-country="china">🇨🇳 China</button>
-        <button class="nav-btn" data-country="japan">🇯🇵 Japan</button>
+    <nav id="navBar">
+        <button class="nav-btn active" data-country="korea" id="btnKorea">🇰🇷 Korea</button>
+        <button class="nav-btn" data-country="china" id="btnChina">🇨🇳 China</button>
+        <button class="nav-btn" data-country="japan" id="btnJapan">🇯🇵 Japan</button>
     </nav>
 
     <main id="content">
@@ -26,7 +31,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 East Asian Culture Guide. All rights reserved.</p>
+        <p id="footerText">&copy; 2026 East Asian Culture Guide. All rights reserved.</p>
     </footer>
 
     <script src="main.js"></script>
