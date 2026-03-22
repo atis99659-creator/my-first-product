@@ -1,33 +1,36 @@
-# Lotto Number Generator
+# Lotto Number Generator with Theme Support
 
 ## Overview
-
-A simple web application that generates and displays a set of 6 unique random lottery numbers between 1 and 45 when the user clicks a button.
+A modern web application that generates 6 unique random lottery numbers (1-45). It features a polished UI with a dynamic dark/light mode toggle and is prepared for Git-based deployment.
 
 ## Features
-
-*   **Number Generation:** Generates 6 unique random numbers from 1 to 45.
-*   **Display:** Shows the generated numbers on the screen.
-*   **User Interaction:** A button to trigger the number generation.
+*   **Lotto Number Generation:** Generates 6 unique random numbers (1-45) with vibrant, category-based colors.
+*   **Theme Support:** Seamless switching between Light and Dark modes with persistent user preference.
+*   **Modern UI:** Responsive design using Web Components, CSS Variables, and Shadow DOM.
+*   **Deployment Ready:** Configured for version control and hosting via Git.
 
 ## Implemented Features & Design
 
-*This section will be updated as features are implemented.*
+### Version 1.0 (Initial)
+*   **Lotto Generator Component:** Custom element `<lotto-generator>` with encapsulated logic and styles.
+*   **Visuals:** Colored circles for numbers, centered layout, and interactive "Generate" button.
 
-### Initial Version
-*   **Component:** A `<lotto-generator>` custom web component.
-*   **Styling:**
-    *   Centered layout.
-    *   A "Generate" button with a subtle glow effect.
-    *   The generated numbers are displayed in colored circles.
-    *   A clean and modern design.
+### Version 1.1 (Theme & Deployment)
+*   **Global Theme Variables:** Centralized color management using CSS variables in `style.css`.
+*   **Theme Toggle:** Integrated toggle switch to swap between Light and Dark modes.
+*   **Local Storage:** Persistence of the selected theme across sessions.
+*   **Accessibility:** High-contrast text and ARIA-compliant elements.
+*   **Git Integration:** Project structured for version control.
 
-## Current Plan
+## Current Plan (Completed)
 
-1.  **`index.html`:** Add a `<lotto-generator>` element to the body.
-2.  **`main.js`:**
-    *   Create the `LottoGenerator` class, a custom `HTMLElement`.
-    *   Implement the logic to generate 6 unique random numbers between 1 and 45.
-    *   Use the Shadow DOM to encapsulate the component's structure and style.
-    *   Define the custom element `lotto-generator`.
-3.  **`style.css`:** Add global styles for the body and the lottery component to ensure a polished look and feel.
+1.  **Style System Refactor:** Implemented CSS variables and theme detection.
+2.  **Theme Toggle Implementation:** Added functional toggle with storage persistence.
+3.  **Component Updates:** Refactored `<lotto-generator>` for theme compatibility and improved animations.
+4.  **Git Deployment:** Staging and committing changes.
+
+## Verification
+*   **Theme Persistence:** Verified.
+*   **System Preference:** Verified via `matchMedia`.
+*   **Responsive Design:** Container and circles adapt to viewport.
+*   **Git Status:** Ready for final commit.
