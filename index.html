@@ -43,17 +43,17 @@
         <p id="footerText">&copy; 2026 World Culture Guide. All rights reserved.</p>
     </footer>
 
-    <!-- Map Modal -->
-    <div id="mapModal" class="modal">
+    <!-- Regions Modal -->
+    <div id="regionModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeModal">&times;</span>
-            <h2 id="mapTitle">Interactive Map</h2>
-            <div id="mapContainer">
-                <!-- SVG will be injected here -->
+            <h2 id="modalTitle">Detailed Regions</h2>
+            <div id="regionsContainer" class="regions-grid">
+                <!-- Region buttons will be injected here -->
             </div>
-            <div id="regionInfo">
-                <p id="regionHint">Click on a region to see its name</p>
-                <h3 id="selectedRegionName"></h3>
+            <div id="regionDetail" class="region-detail-box">
+                <p id="regionHint">Select a region to learn more</p>
+                <h3 id="selectedRegionTitle"></h3>
             </div>
         </div>
     </div>

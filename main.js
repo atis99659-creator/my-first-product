@@ -1,133 +1,142 @@
-// Data Store with Realistic SVG Maps for 12 Countries
+// Data Store with Regional Categories for 12 Countries
 const cultures = {
     korea: {
         en: { name: "South Korea", greeting: "Annyeonghaseyo", food: "Kimchi, Bulgogi", clothing: "Hanbok", description: "A country with 5,000 years of history, blending ancient tradition with cutting-edge technology." },
         ko: { name: "대한민국", greeting: "안녕하세요", food: "김치, 불고기", clothing: "한복", description: "반만년의 역사를 가진 나라로, 고대 전통과 첨단 기술이 조화롭게 공존하는 곳입니다." },
-        emoji: "🇰🇷", color: "#3498db", viewBox: "0 0 100 150",
+        emoji: "🇰🇷", color: "#3498db",
         regions: [
-            { id: "kr-gg", d: "M 40 40 Q 45 35 50 40 L 55 45 Q 50 50 45 45 Z", en: "Seoul/Gyeonggi", ko: "서울/경기도" },
-            { id: "kr-gw", d: "M 50 20 Q 65 20 75 30 L 70 50 Q 55 45 50 40 Z", en: "Gangwon", ko: "강원도" },
-            { id: "kr-cc", d: "M 30 50 Q 45 50 50 65 L 40 80 Q 25 70 30 50 Z", en: "Chungcheong", ko: "충청도" },
-            { id: "kr-gs", d: "M 55 55 Q 85 60 80 100 L 55 110 Q 50 80 55 55 Z", en: "Gyeongsang", ko: "경상도" },
-            { id: "kr-jl", d: "M 20 85 Q 40 85 50 110 L 30 130 Q 15 110 20 85 Z", en: "Jeolla", ko: "전라도" },
-            { id: "kr-jj", d: "M 35 135 Q 45 130 55 140 Q 45 150 35 145 Z", en: "Jeju Island", ko: "제주도" }
+            { en: "Seoul", ko: "서울" },
+            { en: "Gyeonggi-do", ko: "경기도" },
+            { en: "Gangwon-do", ko: "강원도" },
+            { en: "Chungcheong-do", ko: "충청도" },
+            { en: "Jeolla-do", ko: "전라도" },
+            { en: "Gyeongsang-do", ko: "경상도" },
+            { en: "Jeju-do", ko: "제주도" }
         ]
     },
     france: {
-        en: { name: "France", greeting: "Bonjour", food: "Croissant, Escargot", clothing: "Breton shirt", description: "Western Europe's largest country, famous for the Eiffel Tower, fashion, and world-class wine." },
-        ko: { name: "프랑스", greeting: "봉쥬르", food: "크로와상, 에스카르고", clothing: "브르통 셔츠", description: "서유럽에서 가장 큰 나라로, 에펠탑, 패션, 그리고 세계적인 와인으로 유명합니다." },
-        emoji: "🇫🇷", color: "#002395", viewBox: "0 0 100 100",
+        en: { name: "France", greeting: "Bonjour", food: "Croissant, Escargot", clothing: "Breton shirt", description: "Famous for the Eiffel Tower, fashion, and world-class wine." },
+        ko: { name: "프랑스", greeting: "봉쥬르", food: "크로와상, 에스카르고", clothing: "브르통 셔츠", description: "에펠탑, 패션, 그리고 세계적인 와인으로 유명합니다." },
+        emoji: "🇫🇷", color: "#002395",
         regions: [
-            { id: "fr-n", d: "M 30 10 Q 50 5 70 15 L 75 40 Q 50 45 35 35 Z", en: "Ile-de-France (Paris)", ko: "일드프랑스 (파리)" },
-            { id: "fr-w", d: "M 10 35 Q 25 30 35 40 L 30 75 Q 15 70 10 40 Z", en: "Brittany/West", ko: "브르타뉴/서부" },
-            { id: "fr-e", d: "M 75 25 Q 90 30 95 55 L 75 80 Q 60 70 75 25 Z", en: "Grand Est/East", ko: "그랑에스트/동부" },
-            { id: "fr-s", d: "M 35 75 Q 60 70 85 85 L 70 95 Q 40 98 30 85 Z", en: "Provence/South", ko: "프로방스/남부" }
+            { en: "Paris (Île-de-France)", ko: "파리 (일드프랑스)" },
+            { en: "Provence-Alpes-Côte d'Azur", ko: "프로방스-알프-코트다쥐르" },
+            { en: "Normandy", ko: "노르망디" },
+            { en: "Brittany", ko: "브르타뉴" },
+            { en: "Grand Est", ko: "그랑에스트" }
         ]
     },
     japan: {
         en: { name: "Japan", greeting: "Konnichiwa", food: "Sushi, Ramen", clothing: "Kimono", description: "An island nation where deep-rooted traditions meet futuristic urban landscapes." },
         ko: { name: "일본", greeting: "곤니찌와", food: "초밥, 라멘", clothing: "기모노", description: "뿌리 깊은 전통과 미래지향적인 도시 풍경이 만나는 섬나라입니다." },
-        emoji: "🇯🇵", color: "#9b59b6", viewBox: "0 0 100 120",
+        emoji: "🇯🇵", color: "#9b59b6",
         regions: [
-            { id: "jp-hk", d: "M 70 10 Q 85 5 95 20 L 80 40 Q 65 35 70 10 Z", en: "Hokkaido", ko: "홋카이도" },
-            { id: "jp-hs", d: "M 40 40 Q 60 40 70 70 L 50 100 Q 30 80 40 40 Z", en: "Honshu (Tokyo/Osaka)", ko: "혼슈 (도쿄/오사카)" },
-            { id: "jp-ky", d: "M 15 90 Q 30 95 35 110 L 15 115 Q 10 100 15 90 Z", en: "Kyushu/Shikoku", ko: "규슈/시코쿠" }
+            { en: "Kanto (Tokyo)", ko: "간토 (도쿄)" },
+            { en: "Kansai (Osaka/Kyoto)", ko: "간사이 (오사카/교토)" },
+            { en: "Hokkaido", ko: "홋카이도" },
+            { en: "Kyushu", ko: "규슈" },
+            { en: "Chubu", ko: "주부" }
         ]
     },
     china: {
-        en: { name: "China", greeting: "Ni Hao", food: "Dim Sum, Peking Duck", clothing: "Qipao", description: "A huge nation with over 5,000 years of civilization and diverse regional cultures." },
-        ko: { name: "중국", greeting: "니하오", food: "딤섬, 베이징 덕", clothing: "치파오", description: "5,000년 이상의 문명과 다양한 지역 문화를 가진 거대한 나라입니다." },
-        emoji: "🇨🇳", color: "#e74c3c", viewBox: "0 0 150 100",
+        en: { name: "China", greeting: "Ni Hao", food: "Dim Sum, Peking Duck", clothing: "Qipao", description: "A huge nation with over 5,000 years of civilization." },
+        ko: { name: "중국", greeting: "니하오", food: "딤섬, 베이징 덕", clothing: "치파오", description: "5,000년 이상의 문명을 가진 거대한 나라입니다." },
+        emoji: "🇨🇳", color: "#e74c3c",
         regions: [
-            { id: "cn-n", d: "M 80 15 Q 110 10 130 30 L 110 50 Q 85 45 80 15 Z", en: "North (Beijing)", ko: "화베이 (베이징)" },
-            { id: "cn-e", d: "M 115 50 Q 140 55 145 80 L 120 95 Q 100 80 115 50 Z", en: "East (Shanghai)", ko: "화둥 (상하이)" },
-            { id: "cn-w", d: "M 20 30 Q 70 20 85 50 L 70 90 Q 30 85 20 30 Z", en: "West (Tibet/Xinjiang)", ko: "서부 (티베트/신장)" },
-            { id: "cn-s", d: "M 85 65 Q 110 70 115 95 L 80 98 Q 70 85 85 65 Z", en: "South (Guangzhou)", ko: "화난 (광저우)" }
+            { en: "Beijing", ko: "베이징" },
+            { en: "Shanghai", ko: "상하이" },
+            { en: "Guangzhou", ko: "광저우" },
+            { en: "Sichuan", ko: "쓰촨" },
+            { en: "Tibet", ko: "티베트" }
         ]
     },
     usa: {
-        en: { name: "USA", greeting: "Hello", food: "Hamburger, BBQ", clothing: "Jeans", description: "A vast country known for its cultural melting pot, technology, and entertainment." },
-        ko: { name: "미국", greeting: "헬로", food: "햄버거, 바베큐", clothing: "청바지", description: "문화적 용광로, 기술, 엔터테인먼트로 유명한 광대한 나라입니다." },
-        emoji: "🇺🇸", color: "#B22234", viewBox: "0 0 150 100",
+        en: { name: "USA", greeting: "Hello", food: "Hamburger, BBQ", clothing: "Jeans", description: "A vast country known for its cultural melting pot and technology." },
+        ko: { name: "미국", greeting: "헬로", food: "햄버거, 바베큐", clothing: "청바지", description: "문화적 용광로와 기술로 유명한 광대한 나라입니다." },
+        emoji: "🇺🇸", color: "#B22234",
         regions: [
-            { id: "us-w", d: "M 10 20 Q 25 15 45 25 L 40 85 Q 20 90 10 20 Z", en: "West Coast", ko: "서부 해안" },
-            { id: "us-m", d: "M 45 25 Q 75 20 95 30 L 90 75 Q 60 85 45 25 Z", en: "Midwest", ko: "중서부" },
-            { id: "us-ne", d: "M 100 20 Q 130 15 145 35 L 125 55 Q 110 45 100 20 Z", en: "Northeast", ko: "북동부" },
-            { id: "us-s", d: "M 60 70 Q 100 65 140 85 L 120 98 Q 70 98 60 70 Z", en: "The South", ko: "남부" }
+            { en: "Northeast (New York)", ko: "북동부 (뉴욕)" },
+            { en: "West Coast (California)", ko: "서부 해안 (캘리포니아)" },
+            { en: "South (Texas)", ko: "남부 (텍사스)" },
+            { en: "Midwest (Chicago)", ko: "중서부 (시카고)" }
         ]
     },
     spain: {
-        en: { name: "Spain", greeting: "Hola", food: "Paella, Tapas", clothing: "Flamenco dress", description: "Known for sunny beaches, passionate flamenco, and unique architecture by Gaudí." },
-        ko: { name: "스페인", greeting: "올라", food: "파에야, 타파스", clothing: "플라멩코 의상", description: "화창한 해변, 열정적인 플라멩코, 가우디의 독특한 건축물로 유명합니다." },
-        emoji: "🇪🇸", color: "#f1c40f", viewBox: "0 0 100 100",
+        en: { name: "Spain", greeting: "Hola", food: "Paella, Tapas", clothing: "Flamenco dress", description: "Known for sunny beaches and unique architecture." },
+        ko: { name: "스페인", greeting: "올라", food: "파에야, 타파스", clothing: "플라멩코 의상", description: "화창한 해변과 독특한 건축물로 유명합니다." },
+        emoji: "🇪🇸", color: "#f1c40f",
         regions: [
-            { id: "es-n", d: "M 20 15 Q 50 10 85 15 L 75 40 Q 40 45 20 15 Z", en: "North (Basque/Galicia)", ko: "북부 (바스크/갈리시아)" },
-            { id: "es-m", d: "M 40 40 Q 60 40 70 65 L 45 75 Q 30 60 40 40 Z", en: "Central (Madrid)", ko: "중부 (마드리드)" },
-            { id: "es-e", d: "M 80 30 Q 95 40 90 80 L 75 85 Q 70 60 80 30 Z", en: "East (Barcelona/Valencia)", ko: "동부 (바르셀로나/발렌시아)" },
-            { id: "es-s", d: "M 25 75 Q 50 75 75 90 L 50 98 Q 20 95 25 75 Z", en: "South (Andalusia)", ko: "남부 (안달루시아)" }
+            { en: "Madrid", ko: "마드리드" },
+            { en: "Catalonia (Barcelona)", ko: "카탈루냐 (바르셀로나)" },
+            { en: "Andalusia", ko: "안달루시아" },
+            { en: "Basque Country", ko: "바스크 지방" }
         ]
     },
     italy: {
-        en: { name: "Italy", greeting: "Ciao", food: "Pizza, Pasta", clothing: "High Fashion", description: "The birthplace of the Renaissance, rich in history, art, and world-class food." },
-        ko: { name: "이탈리아", greeting: "챠오", food: "피자, 파스타", clothing: "하이 패션", description: "르네상스의 발상지로, 역사, 예술, 그리고 세계적인 음식이 풍부한 나라입니다." },
-        emoji: "🇮🇹", color: "#27ae60", viewBox: "0 0 100 120",
+        en: { name: "Italy", greeting: "Ciao", food: "Pizza, Pasta", clothing: "High Fashion", description: "The birthplace of the Renaissance, rich in art and food." },
+        ko: { name: "이탈리아", greeting: "챠오", food: "피자, 파스타", clothing: "하이 패션", description: "르네상스의 발상지로, 예술과 음식이 풍부한 나라입니다." },
+        emoji: "🇮🇹", color: "#27ae60",
         regions: [
-            { id: "it-n", d: "M 20 10 Q 50 5 90 15 L 80 45 Q 40 40 20 10 Z", en: "North (Milan/Venice)", ko: "북부 (밀라노/베네치아)" },
-            { id: "it-c", d: "M 45 45 Q 60 50 70 75 L 50 85 Q 40 65 45 45 Z", en: "Central (Rome/Florence)", ko: "중부 (로마/피렌체)" },
-            { id: "it-s", d: "M 55 85 Q 75 95 85 115 L 65 118 Q 50 100 55 85 Z", en: "South (Naples/Sicily)", ko: "남부 (나폴리/시칠리아)" }
+            { en: "Lombardy (Milan)", ko: "롬바르디아 (밀라노)" },
+            { en: "Lazio (Rome)", ko: "라치오 (로마)" },
+            { en: "Tuscany (Florence)", ko: "토스카나 (피렌체)" },
+            { en: "Campania (Naples)", ko: "캄파니아 (나폴리)" },
+            { en: "Sicily", ko: "시칠리아" }
         ]
     },
     turkey: {
-        en: { name: "Turkey", greeting: "Merhaba", food: "Kebab, Baklava", clothing: "Kaftan", description: "A transcontinental country bridging Europe and Asia, home to ancient empires." },
-        ko: { name: "튀르키예", greeting: "메르하바", food: "케밥, 바클라바", clothing: "카프탄", description: "유럽과 아시아를 잇는 대륙 횡단 국가로, 고대 제국들의 요람입니다." },
-        emoji: "🇹🇷", color: "#c0392b", viewBox: "0 0 150 80",
+        en: { name: "Turkey", greeting: "Merhaba", food: "Kebab, Baklava", clothing: "Kaftan", description: "A transcontinental country bridging Europe and Asia." },
+        ko: { name: "튀르키예", greeting: "메르하바", food: "케밥, 바클라바", clothing: "카프탄", description: "유럽과 아시아를 잇는 대륙 횡단 국가입니다." },
+        emoji: "🇹🇷", color: "#c0392b",
         regions: [
-            { id: "tr-w", d: "M 10 20 Q 30 15 50 25 L 45 70 Q 20 65 10 20 Z", en: "Marmara/Aegean (Istanbul)", ko: "마르마라/에게해 (이스탄불)" },
-            { id: "tr-c", d: "M 55 25 Q 95 20 105 50 L 95 75 Q 60 75 55 25 Z", en: "Central Anatolia", ko: "중앙 아나톨리아" },
-            { id: "tr-e", d: "M 110 25 Q 140 30 145 60 L 120 75 Q 105 70 110 25 Z", en: "East/Black Sea", ko: "동부/흑해" }
+            { en: "Marmara (Istanbul)", ko: "마르마라 (이스탄불)" },
+            { en: "Central Anatolia (Ankara)", ko: "중앙 아나톨리아 (앙카라)" },
+            { en: "Aegean", ko: "에게해 지방" },
+            { en: "Mediterranean", ko: "지중해 지방" }
         ]
     },
     mexico: {
-        en: { name: "Mexico", greeting: "Hola", food: "Tacos, Burritos", clothing: "Sombrero", description: "Famous for its ancient Aztec/Mayan ruins, colorful festivals, and spicy cuisine." },
-        ko: { name: "멕시코", greeting: "올라", food: "타코, 부리또", clothing: "솜브레로", description: "고대 아즈텍/마야 유적, 화려한 축제, 그리고 매콤한 요리로 유명합니다." },
-        emoji: "🇲🇽", color: "#16a085", viewBox: "0 0 150 100",
+        en: { name: "Mexico", greeting: "Hola", food: "Tacos, Burritos", clothing: "Sombrero", description: "Famous for its ancient ruins and colorful festivals." },
+        ko: { name: "멕시코", greeting: "올라", food: "타코, 부리또", clothing: "솜브레로", description: "고대 유적과 화려한 축제로 유명합니다." },
+        emoji: "🇲🇽", color: "#16a085",
         regions: [
-            { id: "mx-n", d: "M 20 15 Q 70 10 110 20 L 95 55 Q 40 50 20 15 Z", en: "North Mexico", ko: "북부 멕시코" },
-            { id: "mx-c", d: "M 85 55 Q 105 55 115 80 L 90 90 Q 75 75 85 55 Z", en: "Central (Mexico City)", ko: "중부 (멕시코시티)" },
-            { id: "mx-s", d: "M 115 70 Q 140 70 145 95 L 120 98 Q 110 90 115 70 Z", en: "South (Yucatan)", ko: "남부 (유카탄)" }
+            { en: "Mexico City", ko: "멕시코시티" },
+            { en: "Yucatán (Cancún)", ko: "유카탄 (칸쿤)" },
+            { en: "Jalisco (Guadalajara)", ko: "할리스코 (과달라하라)" },
+            { en: "Baja California", ko: "바하 캘리포니아" }
         ]
     },
     uk: {
-        en: { name: "United Kingdom", greeting: "Hello", food: "Fish and Chips", clothing: "Kilts", description: "Comprising four nations, it has a long history of global cultural influence." },
-        ko: { name: "영국", greeting: "헬로", food: "피쉬 앤 칩스", clothing: "킬트", description: "네 개의 국가로 구성되어 있으며, 오랜 세계 문화 영향력의 역사를 가지고 있습니다." },
-        emoji: "🇬🇧", color: "#2c3e50", viewBox: "0 0 100 130",
+        en: { name: "United Kingdom", greeting: "Hello", food: "Fish and Chips", clothing: "Kilts", description: "Comprising four nations with long historical influence." },
+        ko: { name: "영국", greeting: "헬로", food: "피쉬 앤 칩스", clothing: "킬트", description: "네 개의 국가로 구성된 긴 역사를 가진 나라입니다." },
+        emoji: "🇬🇧", color: "#2c3e50",
         regions: [
-            { id: "uk-s", d: "M 30 10 Q 50 5 75 15 L 70 50 Q 40 45 30 10 Z", en: "Scotland", ko: "스코틀랜드" },
-            { id: "uk-e", d: "M 45 55 Q 75 60 85 110 L 45 120 Q 35 90 45 55 Z", en: "England (London)", ko: "잉글랜드 (런던)" },
-            { id: "uk-w", d: "M 25 75 Q 40 75 40 100 L 25 105 Q 15 90 25 75 Z", en: "Wales", ko: "웨일스" },
-            { id: "uk-ni", d: "M 10 45 Q 25 45 25 65 L 10 65 Q 5 55 10 45 Z", en: "Northern Ireland", ko: "북아일랜드" }
+            { en: "England (London)", ko: "잉글랜드 (런던)" },
+            { en: "Scotland (Edinburgh)", ko: "스코틀랜드 (에든버러)" },
+            { en: "Wales (Cardiff)", ko: "웨일스 (카디프)" },
+            { en: "Northern Ireland (Belfast)", ko: "북아일랜드 (벨파스트)" }
         ]
     },
     germany: {
-        en: { name: "Germany", greeting: "Hallo", food: "Pretzel, Schnitzel", clothing: "Lederhosen", description: "Europe's leading economy, known for its engineering, beer, and historical cities." },
-        ko: { name: "독일", greeting: "할로", food: "프레첼, 슈니첼", clothing: "레더호젠", description: "유럽 최대의 경제 대국으로, 공학, 맥주, 그리고 역사적인 도시들로 유명합니다." },
-        emoji: "🇩🇪", color: "#34495e", viewBox: "0 0 100 120",
+        en: { name: "Germany", greeting: "Hallo", food: "Pretzel, Schnitzel", clothing: "Lederhosen", description: "Known for its engineering, beer, and historical cities." },
+        ko: { name: "독일", greeting: "할로", food: "프레첼, 슈니첼", clothing: "레더호젠", description: "공학, 맥주, 그리고 역사적인 도시들로 유명합니다." },
+        emoji: "🇩🇪", color: "#34495e",
         regions: [
-            { id: "de-n", d: "M 20 15 Q 50 10 85 15 L 80 50 Q 45 55 20 15 Z", en: "North (Berlin/Hamburg)", ko: "북부 (베를린/함부르크)" },
-            { id: "de-w", d: "M 15 55 Q 45 55 45 90 L 20 105 Q 10 85 15 55 Z", en: "West (Rhine/Frankfurt)", ko: "서부 (라인/프랑크푸르트)" },
-            { id: "de-e", d: "M 55 55 Q 85 55 90 95 L 65 105 Q 50 85 55 55 Z", en: "East (Dresden)", ko: "동부 (드레스덴)" },
-            { id: "de-s", d: "M 30 95 Q 75 95 80 115 L 40 118 Q 20 110 30 95 Z", en: "South (Bavaria/Munich)", ko: "남부 (바바리아/뮌헨)" }
+            { en: "Bavaria (Munich)", ko: "바바리아 (뮌헨)" },
+            { en: "Berlin", ko: "베를린" },
+            { en: "Hamburg", ko: "함부르크" },
+            { en: "Hesse (Frankfurt)", ko: "헤센 (프랑크푸르트)" }
         ]
     },
     greece: {
-        en: { name: "Greece", greeting: "Yasas", food: "Moussaka, Gyros", clothing: "Chiton", description: "The cradle of Western civilization, famous for its ancient philosophy and beautiful islands." },
-        ko: { name: "그리스", greeting: "야사스", food: "무사카, 기로스", clothing: "키톤", description: "서구 문명의 발상지로, 고대 철학, 신화, 그리고 아름다운 섬들로 유명합니다." },
-        emoji: "🇬🇷", color: "#2980b9", viewBox: "0 0 120 100",
+        en: { name: "Greece", greeting: "Yasas", food: "Moussaka, Gyros", clothing: "Chiton", description: "The cradle of Western civilization and beautiful islands." },
+        ko: { name: "그리스", greeting: "야사스", food: "무사카, 기로스", clothing: "키톤", description: "서구 문명의 발상지와 아름다운 섬들로 유명합니다." },
+        emoji: "🇬🇷", color: "#2980b9",
         regions: [
-            { id: "gr-n", d: "M 20 10 Q 70 5 100 15 L 85 45 Q 40 40 20 10 Z", en: "North (Macedonia)", ko: "북부 (마케도니아)" },
-            { id: "gr-c", d: "M 35 45 Q 65 45 60 70 L 30 75 Q 25 60 35 45 Z", en: "Central (Athens)", ko: "중부 (아테네)" },
-            { id: "gr-p", d: "M 20 75 Q 45 75 50 95 L 25 98 Q 15 90 20 75 Z", en: "Peloponnese", ko: "펠로폰네소스" },
-            { id: "gr-i", d: "M 75 55 Q 110 55 115 95 L 85 98 Q 70 80 75 55 Z", en: "Islands (Crete/Santorini)", ko: "섬 지역 (크레타/산토리니)" }
+            { en: "Attica (Athens)", ko: "아티카 (아테네)" },
+            { en: "Central Macedonia (Thessaloniki)", ko: "중앙 마케도니아 (테살로니키)" },
+            { en: "Crete", ko: "크레타" },
+            { en: "South Aegean (Santorini/Mykonos)", ko: "남에게해 (산토리니/미코노스)" }
         ]
     }
 };
@@ -135,16 +144,16 @@ const cultures = {
 const uiTranslations = {
     en: {
         pageTitle: "🌏 World Culture Guide",
-        btnMap: "🗺️ View Detailed Map",
-        modalHint: "Click on a region to see its name",
+        btnRegions: "🏘️ View Detailed Regions",
+        modalHint: "Select a region to see its name",
         greeting: "Greeting", food: "Famous Food", clothing: "Clothing",
         footer: "© 2026 World Culture Guide. All rights reserved.",
         themeLight: "☀️ Light Mode", themeDark: "🌙 Dark Mode"
     },
     ko: {
         pageTitle: "🌏 세계 문화 가이드",
-        btnMap: "🗺️ 상세 지도 보기",
-        modalHint: "지도의 구역을 클릭하면 이름을 볼 수 있습니다",
+        btnRegions: "🏘️ 상세 지역 보기",
+        modalHint: "지역을 선택하면 이름을 확인할 수 있습니다",
         greeting: "인사말", food: "대표 음식", clothing: "전통 의상",
         footer: "© 2026 세계 문화 가이드. 모든 권리 보유.",
         themeLight: "☀️ 라이트 모드", themeDark: "🌙 다크 모드"
@@ -158,11 +167,11 @@ const langToggle = document.getElementById('langToggle');
 const html = document.documentElement;
 
 // Modal Elements
-const mapModal = document.getElementById('mapModal');
+const regionModal = document.getElementById('regionModal');
 const closeModal = document.getElementById('closeModal');
-const mapContainer = document.getElementById('mapContainer');
-const mapTitle = document.getElementById('mapTitle');
-const selectedRegionName = document.getElementById('selectedRegionName');
+const regionsContainer = document.getElementById('regionsContainer');
+const modalTitle = document.getElementById('modalTitle');
+const selectedRegionTitle = document.getElementById('selectedRegionTitle');
 const regionHint = document.getElementById('regionHint');
 
 let currentLang = localStorage.getItem('lang') || 'ko';
@@ -199,44 +208,38 @@ function renderContent(countryKey) {
                 <section class="info-item"><h3>${uiTranslations[currentLang].food}</h3><p>${content.food}</p></section>
                 <section class="info-item"><h3>${uiTranslations[currentLang].clothing}</h3><p>${content.clothing}</p></section>
             </div>
-            <button class="map-btn" onclick="openMap('${countryKey}')">${uiTranslations[currentLang].btnMap}</button>
+            <button class="map-btn" onclick="showRegions('${countryKey}')">${uiTranslations[currentLang].btnRegions}</button>
         </article>
     `;
 }
 
-function openMap(countryKey) {
+function showRegions(countryKey) {
     const data = cultures[countryKey];
     const content = data[currentLang];
-    mapTitle.textContent = `${data.emoji} ${content.name} - ${uiTranslations[currentLang].btnMap}`;
-    selectedRegionName.textContent = "";
+    modalTitle.textContent = `${data.emoji} ${content.name} - ${uiTranslations[currentLang].btnRegions}`;
+    selectedRegionTitle.textContent = "";
     
-    let pathsSvg = "";
+    regionsContainer.innerHTML = "";
     data.regions.forEach(region => {
-        pathsSvg += `<path d="${region.d}" id="${region.id}" data-name-en="${region.en}" data-name-ko="${region.ko}"></path>`;
+        const btn = document.createElement('button');
+        btn.className = 'region-item-btn';
+        btn.textContent = currentLang === 'ko' ? region.ko : region.en;
+        btn.onclick = (e) => {
+            // Remove active from others
+            regionsContainer.querySelectorAll('.region-item-btn').forEach(b => b.classList.remove('active'));
+            // Set active
+            btn.classList.add('active');
+            selectedRegionTitle.textContent = currentLang === 'ko' ? region.ko : region.en;
+        };
+        regionsContainer.appendChild(btn);
     });
 
-    mapContainer.innerHTML = `
-        <svg viewBox="${data.viewBox}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <rect width="100%" height="100%" fill="var(--bg-secondary)" opacity="0.3" rx="10"/>
-            ${pathsSvg}
-        </svg>
-    `;
-
-    mapModal.style.display = "flex";
-
-    mapContainer.querySelectorAll('path').forEach(path => {
-        path.addEventListener('click', (e) => {
-            const name = currentLang === 'ko' ? e.target.getAttribute('data-name-ko') : e.target.getAttribute('data-name-en');
-            selectedRegionName.textContent = name;
-            mapContainer.querySelectorAll('path').forEach(p => p.style.fill = "#bdc3c7");
-            e.target.style.fill = data.color;
-        });
-    });
+    regionModal.style.display = "flex";
 }
 
-function closeMap() { mapModal.style.display = "none"; }
-closeModal.onclick = closeMap;
-window.onclick = (e) => { if (e.target == mapModal) closeMap(); };
+function closeRegions() { regionModal.style.display = "none"; }
+closeModal.onclick = closeRegions;
+window.onclick = (e) => { if (e.target == regionModal) closeRegions(); };
 
 function applyTheme(theme) {
     html.setAttribute('data-theme', theme);

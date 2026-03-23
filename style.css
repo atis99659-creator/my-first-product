@@ -246,38 +246,50 @@ main {
     color: var(--primary-color);
 }
 
-/* SVG Map Styles */
-#mapContainer {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
+/* Region Categories Styles */
+.regions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
 }
 
-svg {
-    max-width: 100%;
-    max-height: 50vh;
-}
-
-svg path {
-    fill: #ddd;
-    stroke: #333;
-    stroke-width: 0.5;
+.region-item-btn {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
-svg path:hover {
-    fill: var(--primary-color) !important;
-    opacity: 0.8;
+.region-item-btn:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-#regionInfo {
+.region-item-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.region-detail-box {
     margin-top: 20px;
-    padding: 15px;
+    padding: 20px;
     background: var(--bg-secondary);
-    border-radius: 10px;
+    border-radius: 15px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed var(--border-color);
 }
 
 #regionHint {
@@ -287,9 +299,10 @@ svg path:hover {
     margin-bottom: 5px;
 }
 
-#selectedRegionName {
+#selectedRegionTitle {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin: 0;
 }
 
 /* Footer */
