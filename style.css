@@ -113,6 +113,16 @@ nav {
     border-color: var(--primary-color);
 }
 
+@media (max-width: 600px) {
+    nav {
+        gap: 0.5rem;
+    }
+    .nav-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* Main Content */
 main {
     max-width: 800px;
