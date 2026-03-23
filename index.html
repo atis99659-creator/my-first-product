@@ -40,9 +40,24 @@
     </main>
 
     <footer>
-        <p id="footerText">&copy; 2026 East Asian Culture Guide. All rights reserved.</p>
+        <p id="footerText">&copy; 2026 World Culture Guide. All rights reserved.</p>
     </footer>
 
+    <!-- Map Modal -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 id="mapTitle">Interactive Map</h2>
+            <div id="mapContainer">
+                <!-- SVG will be injected here -->
+            </div>
+            <div id="regionInfo">
+                <p id="regionHint">Click on a region to see its name</p>
+                <h3 id="selectedRegionName"></h3>
+            </div>
+        </div>
+    </div>
+
     <script src="main.js"></script>
-</body>
-</html>
+    </body>
+    </html>
