@@ -158,11 +158,29 @@ main {
     flex-wrap: wrap;
 }
 
-.side-flag {
-    font-size: 5rem;
-    line-height: 1;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+.side-flag-img {
+    width: 160px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.modal-flag {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-flag {
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
 }
 
 .country-name-group {

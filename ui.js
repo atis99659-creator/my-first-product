@@ -43,7 +43,11 @@ export function renderContent(countryKey, currentLang) {
         <article class="content-card">
             <header class="country-header">
                 <div class="country-title-row">
-                    <span class="side-flag">${data.emoji}</span>
+                    <img src="https://flagcdn.com/w160/${data.code}.png" 
+                         srcset="https://flagcdn.com/w320/${data.code}.png 2x"
+                         width="160"
+                         alt="${content.name} Flag"
+                         class="side-flag-img">
                     <div class="country-name-group">
                         <h2>${content.name}</h2>
                         <p class="description">${content.description}</p>
@@ -66,7 +70,15 @@ export function renderContent(countryKey, currentLang) {
 export function showRegions(countryKey, currentLang) {
     const data = cultures[countryKey];
     const content = data[currentLang];
-    elements.modalTitle.textContent = `${data.emoji} ${content.name} - ${uiTranslations[currentLang].btnRegions}`;
+    
+    // Modal Title with Flag Image
+    elements.modalTitle.innerHTML = `
+        <img src="https://flagcdn.com/w40/${data.code}.png" 
+             srcset="https://flagcdn.com/w80/${data.code}.png 2x"
+             alt="" class="modal-flag">
+        ${content.name} - ${uiTranslations[currentLang].btnRegions}
+    `;
+    
     elements.selectedRegionTitle.textContent = "";
     
     elements.regionsContainer.innerHTML = "";

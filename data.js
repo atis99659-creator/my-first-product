@@ -3,7 +3,7 @@ export const cultures = {
     korea: {
         en: { name: "South Korea", greeting: "Annyeonghaseyo", food: "Kimchi, Bulgogi", clothing: "Hanbok", description: "A country with 5,000 years of history, blending ancient tradition with cutting-edge technology." },
         ko: { name: "대한민국", greeting: "안녕하세요", food: "김치, 불고기", clothing: "한복", description: "반만년의 역사를 가진 나라로, 고대 전통과 첨단 기술이 조화롭게 공존하는 곳입니다." },
-        emoji: "🇰🇷", color: "#3498db",
+        emoji: "🇰🇷", color: "#3498db", code: "kr",
         regions: [
             { en: "Seoul", ko: "서울" },
             { en: "Gyeonggi-do", ko: "경기도" },
@@ -17,7 +17,7 @@ export const cultures = {
     france: {
         en: { name: "France", greeting: "Bonjour", food: "Croissant, Escargot", clothing: "Breton shirt", description: "Western Europe's largest country, famous for the Eiffel Tower and art." },
         ko: { name: "프랑스", greeting: "봉쥬르", food: "크로와상, 에스카르고", clothing: "브르통 셔츠", description: "서유럽에서 가장 큰 나라로, 에펠탑과 예술로 유명합니다." },
-        emoji: "🇫🇷", color: "#002395",
+        emoji: "🇫🇷", color: "#002395", code: "fr",
         regions: [
             { en: "Île-de-France", ko: "일드프랑스" },
             { en: "Auvergne-Rhône-Alpes", ko: "오베르뉴-론-알프" },
@@ -37,7 +37,7 @@ export const cultures = {
     japan: {
         en: { name: "Japan", greeting: "Konnichiwa", food: "Sushi, Ramen", clothing: "Kimono", description: "An island nation where deep-rooted traditions meet futuristic urban landscapes." },
         ko: { name: "일본", greeting: "곤니찌와", food: "초밥, 라멘", clothing: "기모노", description: "뿌리 깊은 전통과 미래지향적인 도시 풍경이 만나는 섬나라입니다." },
-        emoji: "🇯🇵", color: "#9b59b6",
+        emoji: "🇯🇵", color: "#9b59b6", code: "jp",
         regions: [
             { en: "Hokkaido", ko: "홋카이도" },
             { en: "Tohoku (Sendai)", ko: "도호쿠 (센다이)" },
@@ -52,7 +52,7 @@ export const cultures = {
     china: {
         en: { name: "China", greeting: "Ni Hao", food: "Dim Sum, Peking Duck", clothing: "Qipao", description: "A huge nation with over 5,000 years of civilization." },
         ko: { name: "중국", greeting: "니하오", food: "딤섬, 베이징 덕", clothing: "치파오", description: "5,000년 이상의 문명을 가진 거대한 나라입니다." },
-        emoji: "🇨🇳", color: "#e74c3c",
+        emoji: "🇨🇳", color: "#e74c3c", code: "cn",
         regions: [
             { en: "North China (Huabei)", ko: "화베이 (북중국)" },
             { en: "East China (Huadong)", ko: "화둥 (동중국)" },
@@ -65,7 +65,7 @@ export const cultures = {
     usa: {
         en: { name: "USA", greeting: "Hello", food: "Hamburger, BBQ", clothing: "Jeans", description: "A vast country known for its cultural melting pot and technology." },
         ko: { name: "미국", greeting: "헬로", food: "햄버거, 바베큐", clothing: "청바지", description: "문화적 용광로와 기술로 유명한 광대한 나라입니다." },
-        emoji: "🇺🇸", color: "#B22234",
+        emoji: "🇺🇸", color: "#B22234", code: "us",
         regions: [
             { en: "Florida", ko: "플로리다" },
             { en: "New York", ko: "뉴욕" },
@@ -82,7 +82,7 @@ export const cultures = {
     spain: {
         en: { name: "Spain", greeting: "Hola", food: "Paella, Tapas", clothing: "Flamenco dress", description: "Known for sunny beaches and unique architecture." },
         ko: { name: "스페인", greeting: "올라", food: "파에야, 타파스", clothing: "플라멩코 의상", description: "화창한 해변과 독특한 건축물로 유명합니다." },
-        emoji: "🇪🇸", color: "#f1c40f",
+        emoji: "🇪🇸", color: "#f1c40f", code: "es",
         regions: [
             { en: "Andalusia", ko: "안달루시아" },
             { en: "Catalonia", ko: "카탈루냐" },
@@ -106,7 +106,7 @@ export const cultures = {
     italy: {
         en: { name: "Italy", greeting: "Ciao", food: "Pizza, Pasta", clothing: "High Fashion", description: "The birthplace of the Renaissance, rich in art and food." },
         ko: { name: "이탈리아", greeting: "챠오", food: "피자, 파스타", clothing: "하이 패션", description: "르네상스의 발상지로, 예술과 음식이 풍부한 나라입니다." },
-        emoji: "🇮🇹", color: "#27ae60",
+        emoji: "🇮🇹", color: "#27ae60", code: "it",
         regions: [
             { en: "Lombardy", ko: "롬바르디아" },
             { en: "Veneto", ko: "베네토" },
@@ -133,7 +133,7 @@ export const cultures = {
     turkey: {
         en: { name: "Turkey", greeting: "Merhaba", food: "Kebab, Baklava", clothing: "Kaftan", description: "A transcontinental country bridging Europe and Asia." },
         ko: { name: "튀르키예", greeting: "메르하바", food: "케밥, 바클라바", clothing: "카프탄", description: "유럽과 아시아를 잇는 대륙 횡단 국가입니다." },
-        emoji: "🇹🇷", color: "#c0392b",
+        emoji: "🇹🇷", color: "#c0392b", code: "tr",
         regions: [
             { en: "Marmara", ko: "마르마라" },
             { en: "Aegean", ko: "에게해" },
@@ -147,7 +147,7 @@ export const cultures = {
     mexico: {
         en: { name: "Mexico", greeting: "Hola", food: "Tacos, Burritos", clothing: "Sombrero", description: "Famous for its ancient ruins and colorful festivals." },
         ko: { name: "멕시코", greeting: "올라", food: "타코, 부리또", clothing: "솜브레로", description: "고대 유적과 화려한 축제로 유명합니다." },
-        emoji: "🇲🇽", color: "#16a085",
+        emoji: "🇲🇽", color: "#16a085", code: "mx",
         regions: [
             { en: "North", ko: "북부" },
             { en: "Northwest", ko: "북서부" },
@@ -159,7 +159,7 @@ export const cultures = {
     uk: {
         en: { name: "United Kingdom", greeting: "Hello", food: "Fish and Chips", clothing: "Kilts", description: "Comprising four nations with long historical influence." },
         ko: { name: "영국", greeting: "헬로", food: "피쉬 앤 칩스", clothing: "킬트", description: "네 개의 국가로 구성된 긴 역사를 가진 나라입니다." },
-        emoji: "🇬🇧", color: "#2c3e50",
+        emoji: "🇬🇧", color: "#2c3e50", code: "gb",
         regions: [
             { en: "England", ko: "잉글랜드" },
             { en: "Scotland", ko: "스코틀랜드" },
@@ -170,7 +170,7 @@ export const cultures = {
     germany: {
         en: { name: "Germany", greeting: "Hallo", food: "Pretzel, Schnitzel", clothing: "Lederhosen", description: "Known for its engineering, beer, and historical cities." },
         ko: { name: "독일", greeting: "할로", food: "프레첼, 슈니첼", clothing: "레더호젠", description: "공학, 맥주, 그리고 역사적인 도시들로 유명합니다." },
-        emoji: "🇩🇪", color: "#34495e",
+        emoji: "🇩🇪", color: "#34495e", code: "de",
         regions: [
             { en: "Bavaria", ko: "바이에른" },
             { en: "North Rhine-Westphalia", ko: "노르트라인-베스트팔렌" },
@@ -193,7 +193,7 @@ export const cultures = {
     greece: {
         en: { name: "Greece", greeting: "Yasas", food: "Moussaka, Gyros", clothing: "Chiton", description: "The cradle of Western civilization and beautiful islands." },
         ko: { name: "그리스", greeting: "야사스", food: "무사카, 기로스", clothing: "키톤", description: "서구 문명의 발상지와 아름다운 섬들로 유명합니다." },
-        emoji: "🇬🇷", color: "#2980b9",
+        emoji: "🇬🇷", color: "#2980b9", code: "gr",
         regions: [
             { en: "Attica", ko: "아티키" },
             { en: "Central Macedonia", ko: "중앙 마케도니아" },
