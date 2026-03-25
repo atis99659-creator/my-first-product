@@ -145,16 +145,53 @@ main {
 }
 
 .country-header {
-    text-align: center;
     margin-bottom: 2rem;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 1rem;
 }
 
+.country-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.side-flag {
+    font-size: 5rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.country-name-group {
+    text-align: left;
+}
+
 .country-header h2 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     color: var(--primary-color);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.1); opacity: 0; }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .country-title-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .country-name-group {
+        text-align: center;
+    }
+    .side-flag {
+        font-size: 4rem;
+    }
 }
 
 .info-grid {
