@@ -1,55 +1,42 @@
-`<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Trip Guide Service</title>
+    <title>World Culture Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="light">
     <div class="bg-blobs">
-        <div class="blob blob1"></div>
-        <div class="blob blob2"></div>
-        <div class="blob blob3"></div>
+        <div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
     </div>
     <div class="noise-overlay"></div>
 
     <header>
         <h1 id="pageTitle">🌏 Culture Guide</h1>
         <div class="search-container">
-            <input type="text" id="countrySearch" placeholder="Search country..." aria-label="Search Country">
+            <input type="text" id="countrySearch" placeholder="국가 검색..." autocomplete="off">
             <div id="countryDropdown" class="country-dropdown" style="display: none;"></div>
         </div>
         <div class="controls">
-            <button id="langToggle" class="lang-toggle" aria-label="Switch Language">
-                English
-            </button>
-            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
-                Switch Theme
-            </button>
+            <button id="langToggle">English</button>
+            <button id="themeToggle">Switch Theme</button>
         </div>
     </header>
 
-    <div id="quickNav" class="quick-nav">
-        <!-- Quick access buttons will be injected here by ui.js -->
-    </div>
+    <nav id="quickNav" class="quick-nav"></nav>
 
-    <main id="content">
-        <!-- Content will be injected here by ui.js -->
-    </main>
+    <main id="content"></main>
 
     <footer>
-        <p id="footerText">&copy; 2026 World Culture Guide. All rights reserved.</p>
+        <p id="footerText">&copy; 2026 World Culture Guide.</p>
     </footer>
 
-    <!-- Regions Modal -->
     <div id="regionModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeModal">&times;</span>
             <h2 id="modalTitle">Detailed Regions</h2>
-            <div id="regionsContainer" class="regions-grid">
-                <!-- Region buttons will be injected here -->
-            </div>
+            <div id="regionsContainer" class="regions-grid"></div>
             <div id="regionDetail" class="region-detail-box">
                 <p id="regionHint">Select a region to learn more</p>
                 <div id="selectedRegionContent" class="selected-region-content" style="display: none;">
@@ -66,5 +53,5 @@
     </div>
 
     <script type="module" src="app.js"></script>
-    </body>
-    </html>
+</body>
+</html>
