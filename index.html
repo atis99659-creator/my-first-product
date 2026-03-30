@@ -6,7 +6,7 @@
     <title>World Culture Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="light">
+<body data-theme="dark">
     <div class="bg-blobs">
         <div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
     </div>
@@ -19,14 +19,20 @@
             <div id="countryDropdown" class="country-dropdown" style="display: none;"></div>
         </div>
         <div class="controls">
-            <button id="langToggle">English</button>
-            <button id="themeToggle">Switch Theme</button>
+            <button id="langToggle" class="lang-toggle">English</button>
         </div>
     </header>
 
     <nav id="quickNav" class="quick-nav"></nav>
 
     <main id="content"></main>
+
+    <section id="allCountriesSection" class="all-countries-section">
+        <h2 id="sectionTitle" class="section-title">🌏 All Countries</h2>
+        <div id="countriesGrid" class="countries-grid">
+            <!-- All countries will be injected here by ui.js -->
+        </div>
+    </section>
 
     <footer>
         <p id="footerText">&copy; 2026 World Culture Guide.</p>

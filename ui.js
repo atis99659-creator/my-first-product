@@ -4,13 +4,14 @@ let activeRegion = null;
 
 export const elements = {
     contentContainer: document.getElementById('content'),
-    themeToggle: document.getElementById('themeToggle'),
     langToggle: document.getElementById('langToggle'),
     quickNav: document.getElementById('quickNav'),
     pageTitle: document.getElementById('pageTitle'),
     footerText: document.getElementById('footerText'),
     countrySearch: document.getElementById('countrySearch'),
     countryDropdown: document.getElementById('countryDropdown'),
+    countriesGrid: document.getElementById('countriesGrid'),
+    sectionTitle: document.getElementById('sectionTitle'),
     html: document.documentElement,
     regionModal: document.getElementById('regionModal'),
     closeModal: document.getElementById('closeModal'),
@@ -22,35 +23,21 @@ export const elements = {
     themeButtons: document.querySelectorAll('.theme-btn')
 };
 
-// 모달 내부 테마 버튼(식당, 카페 등) 이벤트 초기화
-export function initUiEvents() {
-    elements.themeButtons.forEach(btn => {
-        btn.onclick = () => {
-            if (!activeRegion) return;
-            const theme = btn.getAttribute('data-theme');
-            elements.themeButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderThemeItems(theme);
-        };
-    });
-}
-
-export function applyTheme(theme) {
-    elements.html.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
-
-export function updateUI(currentLang, currentTheme) {
+export function updateUI(currentLang) {
     const trans = uiTranslations[currentLang];
     if (!trans) return;
 
     elements.pageTitle.textContent = trans.pageTitle;
     elements.footerText.textContent = trans.footer;
-    elements.langToggle.textContent = currentLang === 'en' ? '한국어' : 'English';
-    elements.themeToggle.textContent = currentTheme === 'light' ? trans.themeDark : trans.themeLight;
+    // 버튼 텍스트를 더 예쁘게 (언어 이름만 표시)
+    elements.langToggle.textContent = currentLang === 'en' ? 'KO' : 'EN';
     elements.regionHint.textContent = trans.modalHint;
     elements.countrySearch.placeholder = currentLang === 'ko' ? "국가 검색..." : "Search countries...";
     
+    if (elements.sectionTitle) {
+        elements.sectionTitle.textContent = currentLang === 'ko' ? "🌏 모든 국가" : "🌏 All Countries";
+    }
+
     // 테마 버튼 텍스트 업데이트
     const themeIds = {
         restaurant: 'btnThemeRestaurant',
@@ -80,6 +67,26 @@ export function renderQuickNav(countries, onSelect, currentLang) {
             btn.classList.add('active');
             const country = countries.find(c => c.code === btn.dataset.code);
             onSelect(country);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    });
+}
+
+export function renderAllCountries(countries, onSelect, currentLang) {
+    if (!elements.countriesGrid) return;
+    
+    elements.countriesGrid.innerHTML = countries.map(c => `
+        <div class="grid-item" data-code="${c.code}">
+            <img src="${c.flag}" class="grid-flag" loading="lazy">
+            <span class="grid-name">${currentLang === 'ko' ? c.koName : c.name}</span>
+        </div>
+    `).join('');
+
+    document.querySelectorAll('.grid-item').forEach(item => {
+        item.onclick = () => {
+            const country = countries.find(c => c.code === item.dataset.code);
+            onSelect(country);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     });
 }
@@ -98,35 +105,53 @@ export function renderContent(country, currentLang) {
                 <img src="${country.flag}" alt="${country.name} Flag" class="main-flag-img">
                 <div class="info-badge"><span>${currentLang === 'ko' ? '수도' : 'Capital'}</span>: ${country.capital}</div>
                 <div class="info-badge"><span>${currentLang === 'ko' ? '지역' : 'Region'}</span>: ${country.region}</div>
+                <div class="info-badge"><span>${currentLang === 'ko' ? '인구' : 'Population'}</span>: ${country.population}</div>
                 ${detailedData ? `<button class="map-btn" id="viewRegionsBtn">${uiTranslations[currentLang].btnRegions}</button>` : ''}
             </div>
             <div class="center-title">
-                <h2 style="color: ${detailedData ? detailedData.color : 'inherit'}">${countryName}</h2>
+                <h2 style="color: ${detailedData ? detailedData.color : 'var(--primary-color)'}">${countryName}</h2>
                 <div class="ko-name">${secondaryName}</div>
-                ${detailedData ? `<p>${detailedData[currentLang].description}</p>` : ''}
+                ${detailedData ? `<p style="margin-top: 1rem; opacity: 0.9;">${detailedData[currentLang].description}</p>` : ''}
             </div>
             <div class="right-map">
                 <img src="${mapUrl}" class="location-map" onerror="this.style.display='none'">
             </div>
         </article>
         ${detailedData ? `
-            <div class="info-grid">
-                <section class="info-item"><h3>🗣️ Greeting</h3><p>${detailedData[currentLang].greeting}</p></section>
-                <section class="info-item"><h3>🍱 Food</h3><p>${detailedData[currentLang].food}</p></section>
-                <section class="info-item"><h3>👔 Clothing</h3><p>${detailedData[currentLang].clothing}</p></section>
+            <div class="info-grid" style="margin-top: 2rem;">
+                <section class="info-item content-card">
+                    <span class="info-icon">🗣️</span>
+                    <h3>${uiTranslations[currentLang].greeting}</h3>
+                    <p>${detailedData[currentLang].greeting}</p>
+                </section>
+                <section class="info-item content-card">
+                    <span class="info-icon">🍱</span>
+                    <h3>${uiTranslations[currentLang].food}</h3>
+                    <p>${detailedData[currentLang].food}</p>
+                </section>
+                <section class="info-item content-card">
+                    <span class="info-icon">👔</span>
+                    <h3>${uiTranslations[currentLang].clothing}</h3>
+                    <p>${detailedData[currentLang].clothing}</p>
+                </section>
             </div>
         ` : ''}
     `;
     
     if (detailedData) {
-        document.getElementById('viewRegionsBtn').onclick = () => {
-            const key = Object.keys(cultures).find(k => cultures[k].code === country.code);
-            showRegions(key, currentLang);
-        };
+        const viewBtn = document.getElementById('viewRegionsBtn');
+        if (viewBtn) {
+            viewBtn.onclick = () => {
+                const key = Object.keys(cultures).find(k => cultures[k].code === country.code);
+                showRegions(key, currentLang);
+            };
+        }
     }
 }
 
 export function setupSearch(countries, onSelect) {
+    if (!elements.countrySearch) return;
+
     elements.countrySearch.oninput = (e) => {
         const val = e.target.value.toLowerCase();
         if (!val) { elements.countryDropdown.style.display = 'none'; return; }
@@ -148,6 +173,13 @@ export function setupSearch(countries, onSelect) {
             };
         });
     };
+
+    document.addEventListener('click', (e) => {
+        const searchContainer = document.querySelector('.search-container');
+        if (searchContainer && !searchContainer.contains(e.target)) {
+            elements.countryDropdown.style.display = 'none';
+        }
+    });
 }
 
 export function showRegions(countryKey, currentLang) {
@@ -170,7 +202,7 @@ export function showRegions(countryKey, currentLang) {
             elements.regionHint.style.display = "none";
             elements.selectedRegionContent.style.display = "block";
             elements.selectedRegionTitle.textContent = currentLang === 'ko' ? region.ko : region.en;
-            renderThemeItems(null); // 초기화
+            renderThemeItems(null); 
         };
         elements.regionsContainer.appendChild(btn);
     });
@@ -194,6 +226,20 @@ function renderThemeItems(theme) {
             ${items.map(item => `<li><a href="${item.url}" target="_blank">${item.name} ↗</a></li>`).join('')}
         </ul>
     ` : `<p class="no-data">Coming Soon</p>`;
+}
+
+// 모달 내부 테마 버튼 초기화
+export function initUiEvents() {
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    themeButtons.forEach(btn => {
+        btn.onclick = () => {
+            if (!activeRegion) return;
+            const theme = btn.getAttribute('data-theme');
+            themeButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderThemeItems(theme);
+        };
+    });
 }
 
 export function closeRegions() {
