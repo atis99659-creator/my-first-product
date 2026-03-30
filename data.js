@@ -111,8 +111,112 @@ export const cultures = {
                     ]
                 }
             },
-            { en: "Gangwon-do", ko: "강원도" },
-            { en: "Chungcheong-do", ko: "충청도" },
+            { 
+                en: "Gangwon-do", ko: "강원도",
+                themes: {
+                    restaurant: [
+                        { name: "엄지네포장마차 (강릉)", url: "https://www.google.com/maps/search/엄지네포장마차+강릉" },
+                        { name: "봉포머구리집 (속초)", url: "https://www.google.com/maps/search/봉포머구리집+속초" },
+                        { name: "동화가든 (강릉)", url: "https://www.google.com/maps/search/동화가든+강릉" },
+                        { name: "만석닭강정 (속초)", url: "https://www.google.com/maps/search/만석닭강정+속초" },
+                        { name: "실비식당 (태백)", url: "https://www.google.com/maps/search/실비식당+태백" },
+                        { name: "고분옥할머니순두부 (강릉)", url: "https://www.google.com/maps/search/고분옥할머니순두부+강릉" },
+                        { name: "백촌막국수 (고성)", url: "https://www.google.com/maps/search/백촌막국수+고성" },
+                        { name: "산북막국수 (고성)", url: "https://www.google.com/maps/search/산북막국수+고성" },
+                        { name: "다래한우 (평창)", url: "https://www.google.com/maps/search/다래한우+평창" },
+                        { name: "단양면옥 (양양)", url: "https://www.google.com/maps/search/단양면옥+양양" }
+                    ],
+                    cafe: [
+                        { name: "테라로사커피공장 (강릉)", url: "https://www.google.com/maps/search/테라로사커피공장+강릉" },
+                        { name: "툇마루 (강릉)", url: "https://www.google.com/maps/search/툇마루+강릉" },
+                        { name: "바다정원 (고성)", url: "https://www.google.com/maps/search/바다정원+고성" },
+                        { name: "카페코랄로바이조선 (양양)", url: "https://www.google.com/maps/search/카페코랄로바이조선+양양" },
+                        { name: "칠성조선소 (속초)", url: "https://www.google.com/maps/search/칠성조선소+속초" },
+                        { name: "글라스하우스 (고성)", url: "https://www.google.com/maps/search/글라스하우스+고성" },
+                        { name: "보사노바 (강릉)", url: "https://www.google.com/maps/search/보사노바+강릉" },
+                        { name: "앤드커피랩 (속초)", url: "https://www.google.com/maps/search/앤드커피랩+속초" },
+                        { name: "하이와나 (양양)", url: "https://www.google.com/maps/search/하이와나+양양" },
+                        { name: "로미지안가든 (정선)", url: "https://www.google.com/maps/search/로미지안가든+정선" }
+                    ],
+                    landmark: [
+                        { name: "낙산사 (양양)", url: "https://www.google.com/maps/search/낙산사" },
+                        { name: "남이섬 (춘천)", url: "https://www.google.com/maps/search/남이섬" },
+                        { name: "대관령양떼목장 (평창)", url: "https://www.google.com/maps/search/대관령양떼목장" },
+                        { name: "설악산국립공원 (속초)", url: "https://www.google.com/maps/search/설악산국립공원" },
+                        { name: "정동진역 (강릉)", url: "https://www.google.com/maps/search/정동진역" },
+                        { name: "안목해변 (강릉)", url: "https://www.google.com/maps/search/안목해변" },
+                        { name: "휴휴암 (양양)", url: "https://www.google.com/maps/search/휴휴암" },
+                        { name: "오죽헌 (강릉)", url: "https://www.google.com/maps/search/오죽헌" },
+                        { name: "소양강스카이워크 (춘천)", url: "https://www.google.com/maps/search/소양강스카이워크" },
+                        { name: "와이키키비치 (강릉)", url: "https://www.google.com/maps/search/와이키키비치+강릉" }
+                    ],
+                    activity: [
+                        { name: "서피비치서핑 (양양)", url: "https://www.google.com/maps/search/서피비치+서핑" },
+                        { name: "삼척해상케이블카 (삼척)", url: "https://www.google.com/maps/search/삼척해상케이블카" },
+                        { name: "강촌레일바이크 (춘천)", url: "https://www.google.com/maps/search/강촌레일바이크" },
+                        { name: "정선레일바이크 (정선)", url: "https://www.google.com/maps/search/정선레일바이크" },
+                        { name: "대관령눈썰매 (평창)", url: "https://www.google.com/maps/search/대관령눈썰매" },
+                        { name: "용평리조트스키 (평창)", url: "https://www.google.com/maps/search/용평리조트" },
+                        { name: "하이원워터월드 (정선)", url: "https://www.google.com/maps/search/하이원워터월드" },
+                        { name: "패러글라이딩 (평창)", url: "https://www.google.com/maps/search/평창+패러글라이딩" },
+                        { name: "윈드서핑 (강릉)", url: "https://www.google.com/maps/search/강릉+윈드서핑" },
+                        { name: "아바이마을갯배 (속초)", url: "https://www.google.com/maps/search/아바이마을+갯배" }
+                    ]
+                }
+            },
+            { 
+                en: "Chungcheong-do", ko: "충청도",
+                themes: {
+                    restaurant: [
+                        { name: "성심당 (대전)", url: "https://www.google.com/maps/search/대전+성심당" },
+                        { name: "진로집 (대전)", url: "https://www.google.com/maps/search/대전+진로집" },
+                        { name: "오씨칼국수 (대전)", url: "https://www.google.com/maps/search/대전+오씨칼국수" },
+                        { name: "김화칼국수 (대전)", url: "https://www.google.com/maps/search/대전+김화칼국수" },
+                        { name: "정림식당 (공주)", url: "https://www.google.com/maps/search/공주+정림식당" },
+                        { name: "명암저수지장수촌 (청주)", url: "https://www.google.com/maps/search/청주+명암저수지+장수촌" },
+                        { name: "대복한우 (음성)", url: "https://www.google.com/maps/search/음성+대복한우" },
+                        { name: "원흥식당 (단양)", url: "https://www.google.com/maps/search/단양+원흥식당" },
+                        { name: "대흥식당 (예산)", url: "https://www.google.com/maps/search/예산+대흥식당" },
+                        { name: "서해식당 (태안)", url: "https://www.google.com/maps/search/태안+서해식당" }
+                    ],
+                    cafe: [
+                        { name: "풍세커피 (천안)", url: "https://www.google.com/maps/search/천안+풍세커피" },
+                        { name: "공다방 (공주)", url: "https://www.google.com/maps/search/공주+공다방" },
+                        { name: "리트리빈 (청주)", url: "https://www.google.com/maps/search/청주+리트리빈" },
+                        { name: "카페산 (단양)", url: "https://www.google.com/maps/search/단양+카페산" },
+                        { name: "온더선셋 (태안)", url: "https://www.google.com/maps/search/태안+온더선셋" },
+                        { name: "엔학고레 (공주)", url: "https://www.google.com/maps/search/공주+엔학고레" },
+                        { name: "핀스커피 (천안)", url: "https://www.google.com/maps/search/천안+핀스커피" },
+                        { name: "커피인터뷰 (대전)", url: "https://www.google.com/maps/search/대전+커피인터뷰" },
+                        { name: "카페이오 (청주)", url: "https://www.google.com/maps/search/청주+카페이오" },
+                        { name: "외암민속마을카페 (아산)", url: "https://www.google.com/maps/search/아산+외암민속마을+카페" }
+                    ],
+                    landmark: [
+                        { name: "공산성 (공주)", url: "https://www.google.com/maps/search/공주+공산성" },
+                        { name: "무령왕릉 (공주)", url: "https://www.google.com/maps/search/공주+무령왕릉" },
+                        { name: "독립기념관 (천안)", url: "https://www.google.com/maps/search/천안+독립기념관" },
+                        { name: "대동하늘공원 (대전)", url: "https://www.google.com/maps/search/대전+대동하늘공원" },
+                        { name: "도담삼봉 (단양)", url: "https://www.google.com/maps/search/단양+도담삼봉" },
+                        { name: "만천하스카이워크 (단양)", url: "https://www.google.com/maps/search/단양+만천하스카이워크" },
+                        { name: "꽃지해수욕장 (태안)", url: "https://www.google.com/maps/search/태안+꽃지해수욕장" },
+                        { name: "외암민속마을 (아산)", url: "https://www.google.com/maps/search/아산+외암민속마을" },
+                        { name: "법주사 (보은)", url: "https://www.google.com/maps/search/보은+법주사" },
+                        { name: "청남대 (청주)", url: "https://www.google.com/maps/search/청주+청남대" }
+                    ],
+                    activity: [
+                        { name: "단양패러글라이딩 (단양)", url: "https://www.google.com/maps/search/단양+패러글라이딩" },
+                        { name: "수안보온천 (충주)", url: "https://www.google.com/maps/search/충주+수안보온천" },
+                        { name: "파라다이스스파도고 (아산)", url: "https://www.google.com/maps/search/아산+파라다이스스파도고" },
+                        { name: "단양강잔도길 (단양)", url: "https://www.google.com/maps/search/단양강잔도길" },
+                        { name: "삽교호놀이동산 (당진)", url: "https://www.google.com/maps/search/당진+삽교호놀이동산" },
+                        { name: "예당호출렁다리 (예산)", url: "https://www.google.com/maps/search/예산+예당호출렁다리" },
+                        { name: "청풍호반케이블카 (제천)", url: "https://www.google.com/maps/search/제천+청풍호반케이블카" },
+                        { name: "대천해수욕장짚라인 (보령)", url: "https://www.google.com/maps/search/보령+대천해수욕장+짚라인" },
+                        { name: "오월드 (대전)", url: "https://www.google.com/maps/search/대전+오월드" },
+                        { name: "청주랜드 (청주)", url: "https://www.google.com/maps/search/청주랜드" }
+                    ]
+                }
+            },
             { en: "Jeolla-do", ko: "전라도" },
             { en: "Gyeongsang-do", ko: "경상도" },
             { en: "Jeju-do", ko: "제주도" }
