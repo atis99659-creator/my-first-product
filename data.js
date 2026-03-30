@@ -270,8 +270,112 @@ export const cultures = {
                     ]
                 }
             },
-            { en: "Gyeongsang-do", ko: "경상도" },
-            { en: "Jeju-do", ko: "제주도" }
+            { 
+                en: "Gyeongsang-do", ko: "경상도",
+                themes: {
+                    restaurant: [
+                        { name: "이재모피자 (부산)", url: "https://www.google.com/maps/search/부산+이재모피자" },
+                        { name: "거대갈비 (부산)", url: "https://www.google.com/maps/search/부산+거대갈비" },
+                        { name: "동인동찜갈비 (대구)", url: "https://www.google.com/maps/search/대구+동인동찜갈비" },
+                        { name: "중앙떡볶이 (대구)", url: "https://www.google.com/maps/search/대구+중앙떡볶이" },
+                        { name: "함양집 (경주)", url: "https://www.google.com/maps/search/경주+함양집" },
+                        { name: "황남옥수수 (경주)", url: "https://www.google.com/maps/search/경주+황남옥수수" },
+                        { name: "통영오미사꿀빵 (통영)", url: "https://www.google.com/maps/search/통영+오미사꿀빵" },
+                        { name: "진주하연옥 (진주)", url: "https://www.google.com/maps/search/진주+하연옥" },
+                        { name: "안동현대찜닭 (안동)", url: "https://www.google.com/maps/search/안동+현대찜닭" },
+                        { name: "포항환여횟집 (포항)", url: "https://www.google.com/maps/search/포항+환여횟집" }
+                    ],
+                    cafe: [
+                        { name: "웨이브온커피 (부산)", url: "https://www.google.com/maps/search/부산+웨이브온커피" },
+                        { name: "피아크 (부산)", url: "https://www.google.com/maps/search/부산+피아크" },
+                        { name: "룰리커피 (대구)", url: "https://www.google.com/maps/search/대구+룰리커피" },
+                        { name: "카페능 (경주)", url: "https://www.google.com/maps/search/경주+카페능" },
+                        { name: "황남아데나 (경주)", url: "https://www.google.com/maps/search/경주+황남아데나" },
+                        { name: "미스티크 (통영)", url: "https://www.google.com/maps/search/통영+미스티크" },
+                        { name: "카페오픈더도어 (울산)", url: "https://www.google.com/maps/search/울산+카페오픈더도어" },
+                        { name: "맘모스베이커리 (안동)", url: "https://www.google.com/maps/search/안동+맘모스베이커리" },
+                        { name: "러블리초코 (거제)", url: "https://www.google.com/maps/search/거제+러블리초코" },
+                        { name: "빌라드웨이브 (기장)", url: "https://www.google.com/maps/search/기장+빌라드웨이브" }
+                    ],
+                    landmark: [
+                        { name: "해운대엘시티 (부산)", url: "https://www.google.com/maps/search/부산+해운대엘시티" },
+                        { name: "감천문화마을 (부산)", url: "https://www.google.com/maps/search/부산+감천문화마을" },
+                        { name: "황리단길 (경주)", url: "https://www.google.com/maps/search/경주+황리단길" },
+                        { name: "불국사 (경주)", url: "https://www.google.com/maps/search/경주+불국사" },
+                        { name: "수성못 (대구)", url: "https://www.google.com/maps/search/대구+수성못" },
+                        { name: "김광석다시그리기길 (대구)", url: "https://www.google.com/maps/search/대구+김광석다시그리기길" },
+                        { name: "동궁과월지 (경주)", url: "https://www.google.com/maps/search/경주+동궁과월지" },
+                        { name: "장생포고래문화마을 (울산)", url: "https://www.google.com/maps/search/울산+장생포고래문화마을" },
+                        { name: "죽도시장 (포항)", url: "https://www.google.com/maps/search/포항+죽도시장" },
+                        { name: "호미곶 (포항)", url: "https://www.google.com/maps/search/포항+호미곶" }
+                    ],
+                    activity: [
+                        { name: "해운대블루라인파크 (부산)", url: "https://www.google.com/maps/search/부산+해운대블루라인파크" },
+                        { name: "롯데월드어드벤처부산 (부산)", url: "https://www.google.com/maps/search/부산+롯데월드어드벤처" },
+                        { name: "스카이라인루지 (통영)", url: "https://www.google.com/maps/search/통영+스카이라인루지" },
+                        { name: "이월드 (대구)", url: "https://www.google.com/maps/search/대구+이월드" },
+                        { name: "경주엑스포대공원 (경주)", url: "https://www.google.com/maps/search/경주+엑스포대공원" },
+                        { name: "포항스페이스워크 (포항)", url: "https://www.google.com/maps/search/포항+스페이스워크" },
+                        { name: "사천바다케이블카 (사천)", url: "https://www.google.com/maps/search/사천+바다케이블카" },
+                        { name: "거제씨월드 (거제)", url: "https://www.google.com/maps/search/거제+씨월드" },
+                        { name: "울산대교전망대 (울산)", url: "https://www.google.com/maps/search/울산+울산대교전망대" },
+                        { name: "가야테마파크 (김해)", url: "https://www.google.com/maps/search/김해+가야테마파크" }
+                    ]
+                }
+            },
+            { 
+                en: "Jeju-do", ko: "제주도",
+                themes: {
+                    restaurant: [
+                        { name: "연돈 (서귀포)", url: "https://www.google.com/maps/search/서귀포+연돈" },
+                        { name: "숙성도 (노형)", url: "https://www.google.com/maps/search/제주+숙성도" },
+                        { name: "자매국수 (제주)", url: "https://www.google.com/maps/search/제주+자매국수" },
+                        { name: "오는정김밥 (서귀포)", url: "https://www.google.com/maps/search/서귀포+오는정김밥" },
+                        { name: "우진해장국 (제주)", url: "https://www.google.com/maps/search/제주+우진해장국" },
+                        { name: "명진전복 (구좌)", url: "https://www.google.com/maps/search/구좌+명진전복" },
+                        { name: "춘심이네 (서귀포)", url: "https://www.google.com/maps/search/서귀포+춘심이네" },
+                        { name: "가시식당 (표선)", url: "https://www.google.com/maps/search/표선+가시식당" },
+                        { name: "늘봄흑돼지 (제주)", url: "https://www.google.com/maps/search/제주+늘봄흑돼지" },
+                        { name: "맛나식당 (성산)", url: "https://www.google.com/maps/search/성산+맛나식당" }
+                    ],
+                    cafe: [
+                        { name: "더클리프 (중문)", url: "https://www.google.com/maps/search/중문+더클리프" },
+                        { name: "아베베베이커리 (제주)", url: "https://www.google.com/maps/search/제주+아베베베이커리" },
+                        { name: "테라로사 (서귀포)", url: "https://www.google.com/maps/search/서귀포+테라로사" },
+                        { name: "오설록티뮤지엄 (안덕)", url: "https://www.google.com/maps/search/오설록티뮤지엄" },
+                        { name: "카페노티드 (애월)", url: "https://www.google.com/maps/search/애월+카페노티드" },
+                        { name: "원앤온리 (안덕)", url: "https://www.google.com/maps/search/안덕+원앤온리" },
+                        { name: "앤트러사이트 (한림)", url: "https://www.google.com/maps/search/한림+앤트러사이트" },
+                        { name: "델문도 (함덕)", url: "https://www.google.com/maps/search/함덕+델문도" },
+                        { name: "카페진정성 (종달)", url: "https://www.google.com/maps/search/종달+카페진정성" },
+                        { name: "인스밀 (대정)", url: "https://www.google.com/maps/search/대정+인스밀" }
+                    ],
+                    landmark: [
+                        { name: "성산일출봉 (성산)", url: "https://www.google.com/maps/search/성산일출봉" },
+                        { name: "협재해수욕장 (한림)", url: "https://www.google.com/maps/search/협재해수욕장" },
+                        { name: "카멜리아힐 (안덕)", url: "https://www.google.com/maps/search/카멜리아힐" },
+                        { name: "섭지코지 (성산)", url: "https://www.google.com/maps/search/섭지코지" },
+                        { name: "비자림 (구좌)", url: "https://www.google.com/maps/search/비자림" },
+                        { name: "정방폭포 (서귀포)", url: "https://www.google.com/maps/search/정방폭포" },
+                        { name: "용머리해안 (안덕)", url: "https://www.google.com/maps/search/용머리해안" },
+                        { name: "한라산국립공원 (제주)", url: "https://www.google.com/maps/search/한라산국립공원" },
+                        { name: "성읍민속마을 (표선)", url: "https://www.google.com/maps/search/성읍민속마을" },
+                        { name: "함덕해수욕장 (조천)", url: "https://www.google.com/maps/search/함덕해수욕장" }
+                    ],
+                    activity: [
+                        { name: "9.81파크루지 (애월)", url: "https://www.google.com/maps/search/9.81파크" },
+                        { name: "아쿠아플라넷 (성산)", url: "https://www.google.com/maps/search/아쿠아플라넷+제주" },
+                        { name: "신화월드 (안덕)", url: "https://www.google.com/maps/search/제주신화월드" },
+                        { name: "빛의벙커 (성산)", url: "https://www.google.com/maps/search/빛의벙커" },
+                        { name: "스누피가든 (구좌)", url: "https://www.google.com/maps/search/스누피가든" },
+                        { name: "요트투어 (중문)", url: "https://www.google.com/maps/search/제주+요트투어" },
+                        { name: "서핑체험 (중문/월정)", url: "https://www.google.com/maps/search/제주+서핑체험" },
+                        { name: "우도전기차투어 (우도)", url: "https://www.google.com/maps/search/우도+전기차" },
+                        { name: "한라산등반 (제주)", url: "https://www.google.com/maps/search/한라산" },
+                        { name: "감귤따기체험 (서귀포)", url: "https://www.google.com/maps/search/제주+감귤따기체험" }
+                    ]
+                }
+            }
         ]
     },
     france: {
@@ -316,7 +420,7 @@ export const cultures = {
         regions: [
             { en: "North China (Huabei)", ko: "화베이 (북중국)" },
             { en: "East China (Huadong)", ko: "화둥 (동중국)" },
-            { en: "South China (Huanan)", ko: "화난 (남중국)" },
+            { en: "South China (Huanan)", ko: "남중국)" },
             { en: "Central China (Huazhong)", ko: "화중 (중중국)" },
             { en: "Southwest China (Xinan)", ko: "시난 (서남중국)" },
             { en: "Northwest China (Xibei)", ko: "시베이 (서북중국)" }
@@ -345,7 +449,7 @@ export const cultures = {
         emoji: "🇪🇸", color: "#f1c40f", code: "es",
         regions: [
             { en: "Andalusia", ko: "안달루시아" },
-            { en: "Catalonia", ko: "카탈루냐" },
+            { name: "Catalonia", ko: "카탈루냐" },
             { en: "Madrid", ko: "마드리드" },
             { en: "Valencia", ko: "발렌시아" },
             { en: "Galicia", ko: "갈리시아" },
