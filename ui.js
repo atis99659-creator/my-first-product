@@ -7,7 +7,7 @@ export const elements = {
     contentContainer: document.getElementById('content'),
     themeToggle: document.getElementById('themeToggle'),
     langToggle: document.getElementById('langToggle'),
-    navBar: document.getElementById('navBar'),
+    quickNav: document.getElementById('quickNav'),
     pageTitle: document.getElementById('pageTitle'),
     footerText: document.getElementById('footerText'),
     countrySearch: document.getElementById('countrySearch'),
@@ -41,7 +41,7 @@ export function updateUI(currentLang, currentTheme) {
         ? uiTranslations[currentLang].themeDark 
         : uiTranslations[currentLang].themeLight;
     elements.regionHint.textContent = uiTranslations[currentLang].modalHint;
-    elements.countrySearch.placeholder = currentLang === 'ko' ? "국가 검색..." : "Search country...";
+    elements.countrySearch.placeholder = currentLang === 'ko' ? "전 세계 국가 검색..." : "Search all countries...";
     
     // Update theme buttons text
     elements.btnThemeRestaurant.textContent = uiTranslations[currentLang].themes.restaurant;
@@ -50,8 +50,28 @@ export function updateUI(currentLang, currentTheme) {
     elements.btnThemeActivity.textContent = uiTranslations[currentLang].themes.activity;
 }
 
+export function renderQuickNav(countries, onSelect, currentLang) {
+    const featuredCodes = Object.values(cultures).map(c => c.code);
+    const featuredCountries = countries.filter(c => featuredCodes.includes(c.code));
+
+    elements.quickNav.innerHTML = featuredCountries.map(c => `
+        <button class="nav-btn" data-code="${c.code}">
+            <img src="${c.flag}" class="nav-flag"> ${currentLang === 'ko' ? c.koName : c.name}
+        </button>
+    `).join('');
+
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.onclick = () => {
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const country = countries.find(c => c.code === btn.dataset.code);
+            onSelect(country);
+        };
+    });
+}
+
 export function renderContent(country, currentLang) {
-    const isDetailed = cultures[country.code];
+    const detailedData = Object.values(cultures).find(c => c.code === country.code);
     const countryName = currentLang === 'ko' ? country.koName : country.name;
     const secondaryName = currentLang === 'ko' ? country.name : country.koName;
 
@@ -76,7 +96,7 @@ export function renderContent(country, currentLang) {
                     <span class="info-label">${currentLang === 'ko' ? '인구' : 'Population'}</span>
                     <span>${country.population}</span>
                 </div>
-                ${isDetailed ? `
+                ${detailedData ? `
                     <button class="map-btn" id="viewRegionsBtn" style="margin-top: 1rem; padding: 0.8rem;">
                         ${uiTranslations[currentLang].btnRegions}
                     </button>
@@ -84,12 +104,12 @@ export function renderContent(country, currentLang) {
             </div>
             
             <div class="center-title">
-                <h2 style="color: ${isDetailed ? cultures[country.code].color : 'var(--primary-color)'}">
+                <h2 style="color: ${detailedData ? detailedData.color : 'var(--primary-color)'}">
                     ${countryName}
                 </h2>
                 <div class="ko-name">${secondaryName}</div>
-                ${isDetailed ? `<p style="margin-top: 1rem; max-width: 400px; font-size: 1.1rem; opacity: 0.9;">
-                    ${cultures[country.code][currentLang].description}
+                ${detailedData ? `<p style="margin-top: 1rem; max-width: 400px; font-size: 1.1rem; opacity: 0.9;">
+                    ${detailedData[currentLang].description}
                 </p>` : ''}
             </div>
 
@@ -100,10 +120,34 @@ export function renderContent(country, currentLang) {
                      class="location-map">
             </div>
         </article>
+
+        ${detailedData ? `
+            <div class="info-grid" style="margin-top: 2rem;">
+                <section class="info-item content-card">
+                    <span class="info-icon">🗣️</span>
+                    <h3>${uiTranslations[currentLang].greeting}</h3>
+                    <p>${detailedData[currentLang].greeting}</p>
+                </section>
+                <section class="info-item content-card">
+                    <span class="info-icon">🍱</span>
+                    <h3>${uiTranslations[currentLang].food}</h3>
+                    <p>${detailedData[currentLang].food}</p>
+                </section>
+                <section class="info-item content-card">
+                    <span class="info-icon">👔</span>
+                    <h3>${uiTranslations[currentLang].clothing}</h3>
+                    <p>${detailedData[currentLang].clothing}</p>
+                </section>
+            </div>
+        ` : ''}
     `;
     
-    if (isDetailed) {
-        document.getElementById('viewRegionsBtn').onclick = () => showRegions(country.code, currentLang);
+    if (detailedData) {
+        const countryKey = Object.keys(cultures).find(key => cultures[key].code === country.code);
+        const viewBtn = document.getElementById('viewRegionsBtn');
+        if (viewBtn) {
+            viewBtn.onclick = () => showRegions(countryKey, currentLang);
+        }
     }
 }
 

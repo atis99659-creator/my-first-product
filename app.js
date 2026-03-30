@@ -25,20 +25,32 @@ async function init() {
             }];
         }
 
-        // 3. Setup Search with loaded countries
+        // 3. Setup UI and QuickNav
+        updateUI(currentLang, currentTheme);
+        renderQuickNav(allCountries, (country) => {
+            selectedCountry = country;
+            renderContent(country, currentLang);
+        }, currentLang);
+
+        // 4. Setup Search with loaded countries
         setupSearch(allCountries, (country) => {
             selectedCountry = country;
             renderContent(country, currentLang);
+            // Deactivate all quick nav buttons when searching
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         });
 
-        // 4. Set default country (South Korea)
+        // 5. Set default country (South Korea)
         const defaultCountry = allCountries.find(c => c.code === 'kr') || allCountries[0];
         if (defaultCountry) {
             selectedCountry = defaultCountry;
             renderContent(defaultCountry, currentLang);
+            // Set active state in quick nav
+            const krBtn = document.querySelector(`.nav-btn[data-code="kr"]`);
+            if (krBtn) krBtn.classList.add('active');
         }
 
-        // 5. Global Event Listeners
+        // 6. Global Event Listeners
         elements.themeToggle.addEventListener('click', () => {
             currentTheme = currentTheme === 'light' ? 'dark' : 'light';
             applyTheme(currentTheme);
@@ -49,8 +61,18 @@ async function init() {
             currentLang = currentLang === 'en' ? 'ko' : 'en';
             localStorage.setItem('lang', currentLang);
             updateUI(currentLang, currentTheme);
+            
+            // Update QuickNav text
+            renderQuickNav(allCountries, (country) => {
+                selectedCountry = country;
+                renderContent(country, currentLang);
+            }, currentLang);
+
             if (selectedCountry) {
                 renderContent(selectedCountry, currentLang);
+                // Keep active state
+                const activeBtn = document.querySelector(`.nav-btn[data-code="${selectedCountry.code}"]`);
+                if (activeBtn) activeBtn.classList.add('active');
             }
         });
 
