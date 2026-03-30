@@ -217,7 +217,59 @@ export const cultures = {
                     ]
                 }
             },
-            { en: "Jeolla-do", ko: "전라도" },
+            { 
+                en: "Jeolla-do", ko: "전라도",
+                themes: {
+                    restaurant: [
+                        { name: "가족회관 (전주)", url: "https://www.google.com/maps/search/전주+가족회관" },
+                        { name: "한국집 (전주)", url: "https://www.google.com/maps/search/전주+한국집" },
+                        { name: "진미식당 (익산)", url: "https://www.google.com/maps/search/익산+진미식당" },
+                        { name: "하얀집 (나주)", url: "https://www.google.com/maps/search/나주+하얀집" },
+                        { name: "덕인관 (담양)", url: "https://www.google.com/maps/search/담양+덕인관" },
+                        { name: "천일식당 (해남)", url: "https://www.google.com/maps/search/해남+천일식당" },
+                        { name: "원조떡갈비 (담양)", url: "https://www.google.com/maps/search/담양+원조떡갈비" },
+                        { name: "벽오동 (순천)", url: "https://www.google.com/maps/search/순천+벽오동" },
+                        { name: "오동도정식 (여수)", url: "https://www.google.com/maps/search/여수+오동도정식" },
+                        { name: "청진동해장국 (군산)", url: "https://www.google.com/maps/search/군산+청진동해장국" }
+                    ],
+                    cafe: [
+                        { name: "카페드몽드 (담양)", url: "https://www.google.com/maps/search/담양+카페드몽드" },
+                        { name: "외할머니솜씨 (전주)", url: "https://www.google.com/maps/search/전주+외할머니솜씨" },
+                        { name: "카페전망 (전주)", url: "https://www.google.com/maps/search/전주+카페전망" },
+                        { name: "여수낭만카페 (여수)", url: "https://www.google.com/maps/search/여수+낭만카페" },
+                        { name: "모사금 (여수)", url: "https://www.google.com/maps/search/여수+모사금" },
+                        { name: "브리크 (완주)", url: "https://www.google.com/maps/search/완주+브리크" },
+                        { name: "소소담 (담양)", url: "https://www.google.com/maps/search/담양+소소담" },
+                        { name: "두베카페 (완주)", url: "https://www.google.com/maps/search/완주+두베카페" },
+                        { name: "모현동커피 (익산)", url: "https://www.google.com/maps/search/익산+모현동커피" },
+                        { name: "로맨틱오동도 (여수)", url: "https://www.google.com/maps/search/여수+로맨틱오동도" }
+                    ],
+                    landmark: [
+                        { name: "전주한옥마을 (전주)", url: "https://www.google.com/maps/search/전주한옥마을" },
+                        { name: "순천만습지 (순천)", url: "https://www.google.com/maps/search/순천만습지" },
+                        { name: "여수밤바다 (여수)", url: "https://www.google.com/maps/search/여수+종포해양공원" },
+                        { name: "죽녹원 (담양)", url: "https://www.google.com/maps/search/죽녹원" },
+                        { name: "보성녹차밭 (보성)", url: "https://www.google.com/maps/search/보성녹차밭" },
+                        { name: "목포근대역사관 (목포)", url: "https://www.google.com/maps/search/목포근대역사관" },
+                        { name: "경암동철길마을 (군산)", url: "https://www.google.com/maps/search/경암동철길마을" },
+                        { name: "내장산국립공원 (정읍)", url: "https://www.google.com/maps/search/내장산국립공원" },
+                        { name: "선운사 (고창)", url: "https://www.google.com/maps/search/선운사" },
+                        { name: "향일암 (여수)", url: "https://www.google.com/maps/search/향일암" }
+                    ],
+                    activity: [
+                        { name: "여수해상케이블카 (여수)", url: "https://www.google.com/maps/search/여수해상케이블카" },
+                        { name: "목포해상케이블카 (목포)", url: "https://www.google.com/maps/search/목포해상케이블카" },
+                        { name: "전주레일바이크 (전주)", url: "https://www.google.com/maps/search/전주레일바이크" },
+                        { name: "정남진편백숲우드랜드 (장흥)", url: "https://www.google.com/maps/search/정남진편백숲우드랜드" },
+                        { name: "곡성기차마을 (곡성)", url: "https://www.google.com/maps/search/곡성섬진강기차마을" },
+                        { name: "고창갯벌체험 (고창)", url: "https://www.google.com/maps/search/고창갯벌체험" },
+                        { name: "순천만국가정원 (순천)", url: "https://www.google.com/maps/search/순천만국가정원" },
+                        { name: "변산반도트레킹 (부안)", url: "https://www.google.com/maps/search/변산반도국립공원" },
+                        { name: "해상분수쇼 (목포)", url: "https://www.google.com/maps/search/목포춤추는바다분수" },
+                        { name: "지리산둘레길 (남원)", url: "https://www.google.com/maps/search/지리산둘레길" }
+                    ]
+                }
+            },
             { en: "Gyeongsang-do", ko: "경상도" },
             { en: "Jeju-do", ko: "제주도" }
         ]
