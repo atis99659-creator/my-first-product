@@ -1,5 +1,7 @@
 import { cultures, uiTranslations } from './data.js';
 
+let activeRegion = null;
+
 // DOM Elements
 export const elements = {
     contentContainer: document.getElementById('content'),
@@ -81,6 +83,7 @@ export function renderContent(countryKey, currentLang) {
 export function showRegions(countryKey, currentLang) {
     const data = cultures[countryKey];
     const content = data[currentLang];
+    activeRegion = null;
     
     // Modal Title with Flag Image
     elements.modalTitle.innerHTML = `
@@ -94,6 +97,10 @@ export function showRegions(countryKey, currentLang) {
     elements.regionHint.style.display = "block";
     elements.selectedRegionContent.style.display = "none";
     
+    // Remove previous dynamic content if any
+    const existingDynamic = document.getElementById('dynamicThemeContent');
+    if (existingDynamic) existingDynamic.remove();
+    
     elements.regionsContainer.innerHTML = "";
     data.regions.forEach(region => {
         const btn = document.createElement('button');
@@ -103,14 +110,64 @@ export function showRegions(countryKey, currentLang) {
             elements.regionsContainer.querySelectorAll('.region-item-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
+            activeRegion = region;
             elements.regionHint.style.display = "none";
             elements.selectedRegionContent.style.display = "block";
             elements.selectedRegionTitle.textContent = currentLang === 'ko' ? region.ko : region.en;
+            
+            // Clear dynamic content when region changes
+            const dynamic = document.getElementById('dynamicThemeContent');
+            if (dynamic) dynamic.remove();
+            
+            // Reset theme button active states
+            document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
         };
         elements.regionsContainer.appendChild(btn);
     });
 
     elements.regionModal.style.display = "flex";
+}
+
+// Handle theme button clicks
+document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.onclick = () => {
+        if (!activeRegion) return;
+        
+        const theme = btn.getAttribute('data-theme');
+        document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        renderThemeItems(theme);
+    };
+});
+
+function renderThemeItems(theme) {
+    let dynamicContent = document.getElementById('dynamicThemeContent');
+    if (!dynamicContent) {
+        dynamicContent = document.createElement('div');
+        dynamicContent.id = 'dynamicThemeContent';
+        dynamicContent.className = 'dynamic-theme-content';
+        elements.selectedRegionContent.appendChild(dynamicContent);
+    }
+    
+    const items = (activeRegion.themes && activeRegion.themes[theme]) || [];
+    
+    if (items.length === 0) {
+        dynamicContent.innerHTML = `<p class="no-data">준비 중입니다. (Coming Soon)</p>`;
+        return;
+    }
+    
+    dynamicContent.innerHTML = `
+        <ul class="theme-item-list">
+            ${items.map(item => `
+                <li>
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="theme-item-link">
+                        ${item.name} ↗
+                    </a>
+                </li>
+            `).join('')}
+        </ul>
+    `;
 }
 
 export function closeRegions() {

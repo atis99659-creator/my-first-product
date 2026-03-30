@@ -5,7 +5,23 @@ export const cultures = {
         ko: { name: "대한민국", greeting: "안녕하세요", food: "김치, 불고기", clothing: "한복", description: "반만년의 역사를 가진 나라로, 고대 전통과 첨단 기술이 조화롭게 공존하는 곳입니다." },
         emoji: "🇰🇷", color: "#3498db", code: "kr",
         regions: [
-            { en: "Seoul", ko: "서울" },
+            { 
+                en: "Seoul", ko: "서울",
+                themes: {
+                    restaurant: [
+                        { name: "명동교자 (명동)", url: "https://www.google.com/maps/search/명동교자+명동" },
+                        { name: "우래옥 (을지로)", url: "https://www.google.com/maps/search/우래옥+을지로" },
+                        { name: "금돼지식당 (약수)", url: "https://www.google.com/maps/search/금돼지식당+약수" },
+                        { name: "몽탄 (삼각지)", url: "https://www.google.com/maps/search/몽탄+삼각지" },
+                        { name: "안덕 (서촌)", url: "https://www.google.com/maps/search/안덕+서촌" },
+                        { name: "3대삼계장인 (서초)", url: "https://www.google.com/maps/search/3대삼계장인+서초" },
+                        { name: "진진 (망원)", url: "https://www.google.com/maps/search/진진+망원" },
+                        { name: "쮸즈 (가로수길)", url: "https://www.google.com/maps/search/쮸즈+가로수길" },
+                        { name: "밍글스 (강남)", url: "https://www.google.com/maps/search/밍글스+강남" },
+                        { name: "모수서울 (용산)", url: "https://www.google.com/maps/search/모수서울+용산" }
+                    ]
+                }
+            },
             { en: "Gyeonggi-do", ko: "경기도" },
             { en: "Gangwon-do", ko: "강원도" },
             { en: "Chungcheong-do", ko: "충청도" },
