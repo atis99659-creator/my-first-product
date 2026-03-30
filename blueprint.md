@@ -28,3 +28,10 @@ A framework-less web application (HTML, CSS, JS) that provides a guide to ALL wo
 *   [ ] Refine Wikimedia Commons map names (some countries have different naming patterns).
 *   [ ] Add more detailed cultural info for countries beyond the original 12 (Greetings, Food, Clothing) using additional APIs if possible.
 *   [ ] Improve search performance and UX (e.g., keyboard navigation).
+
+## **Current Task: Update Gangwon-do Detailed Information**
+*   [x] Add famous restaurants, cafes, landmarks, and activities for Gangwon-do in `data1.js`.
+*   [x] Ensure Google Maps search links are included for each item.
+*   [x] Maintain consistency with existing region data structures.
+*   [x] Fix syntax errors and alignment in `data1.js`.
+*   [x] Correct Google Maps links for all other Korean regions.
