@@ -7,19 +7,41 @@ let selectedCountry = null;
 
 async function init() {
     try {
-        // 1. UI 초기화 (다크 모드는 CSS에서 고정)
+        // 1. UI 초기화
         updateUI(currentLang);
         initUiEvents();
 
         // 2. 국가 데이터 가져오기
         allCountries = await fetchAllCountries();
 
+        // 12개 주요 국가 기본 데이터 (API 실패 시 및 데이터 보장용)
+        const featuredFallback = [
+            { name: "South Korea", koName: "대한민국", code: "kr", capital: "Seoul", region: "Asia", population: "51.7M" },
+            { name: "China", koName: "중국", code: "cn", capital: "Beijing", region: "Asia", population: "1.4B" },
+            { name: "Japan", koName: "일본", code: "jp", capital: "Tokyo", region: "Asia", population: "125M" },
+            { name: "France", koName: "프랑스", code: "fr", capital: "Paris", region: "Europe", population: "67M" },
+            { name: "USA", koName: "미국", code: "us", capital: "Washington D.C.", region: "Americas", population: "331M" },
+            { name: "Spain", koName: "스페인", code: "es", capital: "Madrid", region: "Europe", population: "47M" },
+            { name: "Italy", koName: "이탈리아", code: "it", capital: "Rome", region: "Europe", population: "60M" },
+            { name: "Turkey", koName: "튀르키예", code: "tr", capital: "Ankara", region: "Asia", population: "84M" },
+            { name: "Mexico", koName: "멕시코", code: "mx", capital: "Mexico City", region: "Americas", population: "128M" },
+            { name: "United Kingdom", koName: "영국", code: "gb", capital: "London", region: "Europe", population: "67M" },
+            { name: "Germany", koName: "독일", code: "de", capital: "Berlin", region: "Europe", population: "83M" },
+            { name: "Greece", koName: "그리스", code: "gr", capital: "Athens", region: "Europe", population: "10M" }
+        ].map(c => ({
+            ...c,
+            flag: `https://flagcdn.com/w320/${c.code}.png`
+        }));
+
         if (!allCountries || allCountries.length === 0) {
-            allCountries = [{
-                name: "South Korea", koName: "대한민국", code: "kr", 
-                flag: "https://flagcdn.com/w320/kr.png", capital: "Seoul", 
-                region: "Asia", population: "51,780,579"
-            }];
+            allCountries = featuredFallback;
+        } else {
+            // API 데이터가 있더라도 12개 국가가 누락되지 않도록 병합
+            featuredFallback.forEach(featured => {
+                if (!allCountries.find(c => c.code === featured.code)) {
+                    allCountries.push(featured);
+                }
+            });
         }
 
         // 3. 퀵 내비게이션 및 전체 국가 리스트 렌더링
