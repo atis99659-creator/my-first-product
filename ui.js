@@ -16,7 +16,12 @@ export const elements = {
     regionsContainer: document.getElementById('regionsContainer'),
     modalTitle: document.getElementById('modalTitle'),
     selectedRegionTitle: document.getElementById('selectedRegionTitle'),
-    regionHint: document.getElementById('regionHint')
+    regionHint: document.getElementById('regionHint'),
+    selectedRegionContent: document.getElementById('selectedRegionContent'),
+    btnThemeRestaurant: document.getElementById('btnThemeRestaurant'),
+    btnThemeCafe: document.getElementById('btnThemeCafe'),
+    btnThemeLandmark: document.getElementById('btnThemeLandmark'),
+    btnThemeActivity: document.getElementById('btnThemeActivity')
 };
 
 export function applyTheme(theme) {
@@ -32,6 +37,12 @@ export function updateUI(currentLang, currentTheme) {
         ? uiTranslations[currentLang].themeDark 
         : uiTranslations[currentLang].themeLight;
     elements.regionHint.textContent = uiTranslations[currentLang].modalHint;
+    
+    // Update theme buttons text
+    elements.btnThemeRestaurant.textContent = uiTranslations[currentLang].themes.restaurant;
+    elements.btnThemeCafe.textContent = uiTranslations[currentLang].themes.cafe;
+    elements.btnThemeLandmark.textContent = uiTranslations[currentLang].themes.landmark;
+    elements.btnThemeActivity.textContent = uiTranslations[currentLang].themes.activity;
 }
 
 export function renderContent(countryKey, currentLang) {
@@ -80,6 +91,8 @@ export function showRegions(countryKey, currentLang) {
     `;
     
     elements.selectedRegionTitle.textContent = "";
+    elements.regionHint.style.display = "block";
+    elements.selectedRegionContent.style.display = "none";
     
     elements.regionsContainer.innerHTML = "";
     data.regions.forEach(region => {
@@ -89,6 +102,9 @@ export function showRegions(countryKey, currentLang) {
         btn.onclick = () => {
             elements.regionsContainer.querySelectorAll('.region-item-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            
+            elements.regionHint.style.display = "none";
+            elements.selectedRegionContent.style.display = "block";
             elements.selectedRegionTitle.textContent = currentLang === 'ko' ? region.ko : region.en;
         };
         elements.regionsContainer.appendChild(btn);

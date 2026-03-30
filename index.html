@@ -53,7 +53,15 @@
             </div>
             <div id="regionDetail" class="region-detail-box">
                 <p id="regionHint">Select a region to learn more</p>
-                <h3 id="selectedRegionTitle"></h3>
+                <div id="selectedRegionContent" class="selected-region-content" style="display: none;">
+                    <h3 id="selectedRegionTitle"></h3>
+                    <div class="theme-buttons-container">
+                        <button class="theme-btn" data-theme="restaurant" id="btnThemeRestaurant">🍴 음식점</button>
+                        <button class="theme-btn" data-theme="cafe" id="btnThemeCafe">☕ 카페</button>
+                        <button class="theme-btn" data-theme="landmark" id="btnThemeLandmark">🏰 명소</button>
+                        <button class="theme-btn" data-theme="activity" id="btnThemeActivity">⛷️ 액티비티</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

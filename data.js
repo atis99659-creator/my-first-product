@@ -219,7 +219,13 @@ export const uiTranslations = {
         modalHint: "Select a region to see its name",
         greeting: "Greeting", food: "Famous Food", clothing: "Clothing",
         footer: "© 2026 World Culture Guide. All rights reserved.",
-        themeLight: "☀️ Light Mode", themeDark: "🌙 Dark Mode"
+        themeLight: "☀️ Light Mode", themeDark: "🌙 Dark Mode",
+        themes: {
+            restaurant: "🍴 Restaurants",
+            cafe: "☕ Cafes",
+            landmark: "🏰 Landmarks",
+            activity: "⛷️ Activities"
+        }
     },
     ko: {
         pageTitle: "🌏 세계 문화 가이드",
@@ -227,6 +233,12 @@ export const uiTranslations = {
         modalHint: "지역을 선택하면 이름을 확인할 수 있습니다",
         greeting: "인사말", food: "대표 음식", clothing: "전통 의상",
         footer: "© 2026 세계 문화 가이드. 모든 권리 보유.",
-        themeLight: "☀️ 라이트 모드", themeDark: "🌙 다크 모드"
+        themeLight: "☀️ 라이트 모드", themeDark: "🌙 다크 모드",
+        themes: {
+            restaurant: "🍴 음식점",
+            cafe: "☕ 카페",
+            landmark: "🏰 명소",
+            activity: "⛷️ 액티비티"
+        }
     }
 };
