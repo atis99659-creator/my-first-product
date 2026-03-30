@@ -606,3 +606,23 @@ export const uiTranslations = {
         }
     }
 };
+
+export async function fetchAllCountries() {
+    try {
+        const response = await fetch('https://restcountries.com/v3.1/all');
+        const data = await response.json();
+        return data.map(country => ({
+            name: country.name.common,
+            koName: country.translations.kor ? country.translations.kor.common : country.name.common,
+            code: country.cca2.toLowerCase(),
+            flag: country.flags.png,
+            capital: country.capital ? country.capital[0] : 'N/A',
+            region: country.region,
+            population: country.population.toLocaleString(),
+            languages: country.languages ? Object.values(country.languages).join(', ') : 'N/A'
+        })).sort((a, b) => a.name.localeCompare(b.name));
+    } catch (error) {
+        console.error('Error fetching countries:', error);
+        return [];
+    }
+}

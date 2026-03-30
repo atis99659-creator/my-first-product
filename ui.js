@@ -10,6 +10,8 @@ export const elements = {
     navBar: document.getElementById('navBar'),
     pageTitle: document.getElementById('pageTitle'),
     footerText: document.getElementById('footerText'),
+    countrySearch: document.getElementById('countrySearch'),
+    countryDropdown: document.getElementById('countryDropdown'),
     html: document.documentElement,
     
     // Modal Elements
@@ -39,6 +41,7 @@ export function updateUI(currentLang, currentTheme) {
         ? uiTranslations[currentLang].themeDark 
         : uiTranslations[currentLang].themeLight;
     elements.regionHint.textContent = uiTranslations[currentLang].modalHint;
+    elements.countrySearch.placeholder = currentLang === 'ko' ? "국가 검색..." : "Search country...";
     
     // Update theme buttons text
     elements.btnThemeRestaurant.textContent = uiTranslations[currentLang].themes.restaurant;
@@ -47,37 +50,105 @@ export function updateUI(currentLang, currentTheme) {
     elements.btnThemeActivity.textContent = uiTranslations[currentLang].themes.activity;
 }
 
-export function renderContent(countryKey, currentLang) {
-    const data = cultures[countryKey];
-    const content = data[currentLang];
-    elements.html.style.setProperty('--primary-color', data.color);
-    
+export function renderContent(country, currentLang) {
+    const isDetailed = cultures[country.code];
+    const countryName = currentLang === 'ko' ? country.koName : country.name;
+    const secondaryName = currentLang === 'ko' ? country.name : country.koName;
+
+    // Wikimedia Commons Map URL
+    const wikiName = country.name.replace(/ /g, '_');
+    const mapUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/Location_of_${wikiName}_in_the_World.svg`;
+    const fallbackMapUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/Location_of_${wikiName}_on_the_globe.svg`;
+
     elements.contentContainer.innerHTML = `
-        <article class="content-card">
-            <header class="country-header">
-                <div class="country-title-row">
-                    <img src="https://flagcdn.com/w160/${data.code}.png" 
-                         srcset="https://flagcdn.com/w320/${data.code}.png 2x"
-                         width="160"
-                         alt="${content.name} Flag"
-                         class="side-flag-img">
-                    <div class="country-name-group">
-                        <h2>${content.name}</h2>
-                        <p class="description">${content.description}</p>
-                    </div>
+        <article class="country-row">
+            <div class="left-info">
+                <img src="${country.flag}" alt="${country.name} Flag" class="main-flag-img">
+                <div class="info-badge">
+                    <span class="info-label">${currentLang === 'ko' ? '수도' : 'Capital'}</span>
+                    <span>${country.capital}</span>
                 </div>
-            </header>
-            <div class="info-grid">
-                <section class="info-item"><h3>${uiTranslations[currentLang].greeting}</h3><p>${content.greeting}</p></section>
-                <section class="info-item"><h3>${uiTranslations[currentLang].food}</h3><p>${content.food}</p></section>
-                <section class="info-item"><h3>${uiTranslations[currentLang].clothing}</h3><p>${content.clothing}</p></section>
+                <div class="info-badge">
+                    <span class="info-label">${currentLang === 'ko' ? '지역' : 'Region'}</span>
+                    <span>${country.region}</span>
+                </div>
+                <div class="info-badge">
+                    <span class="info-label">${currentLang === 'ko' ? '인구' : 'Population'}</span>
+                    <span>${country.population}</span>
+                </div>
+                ${isDetailed ? `
+                    <button class="map-btn" id="viewRegionsBtn" style="margin-top: 1rem; padding: 0.8rem;">
+                        ${uiTranslations[currentLang].btnRegions}
+                    </button>
+                ` : ''}
             </div>
-            <button class="map-btn" id="viewRegionsBtn" data-country="${countryKey}">${uiTranslations[currentLang].btnRegions}</button>
+            
+            <div class="center-title">
+                <h2 style="color: ${isDetailed ? cultures[country.code].color : 'var(--primary-color)'}">
+                    ${countryName}
+                </h2>
+                <div class="ko-name">${secondaryName}</div>
+                ${isDetailed ? `<p style="margin-top: 1rem; max-width: 400px; font-size: 1.1rem; opacity: 0.9;">
+                    ${cultures[country.code][currentLang].description}
+                </p>` : ''}
+            </div>
+
+            <div class="right-map">
+                <img src="${mapUrl}" 
+                     onerror="this.onerror=null; this.src='${fallbackMapUrl}'; this.onerror=function(){this.style.display='none'};" 
+                     alt="Location of ${country.name} in the world" 
+                     class="location-map">
+            </div>
         </article>
     `;
     
-    // Attach event listener to the newly created button
-    document.getElementById('viewRegionsBtn').onclick = () => showRegions(countryKey, currentLang);
+    if (isDetailed) {
+        document.getElementById('viewRegionsBtn').onclick = () => showRegions(country.code, currentLang);
+    }
+}
+
+export function setupSearch(countries, onSelect) {
+    elements.countrySearch.oninput = (e) => {
+        const value = e.target.value.toLowerCase();
+        if (!value) {
+            elements.countryDropdown.style.display = 'none';
+            return;
+        }
+
+        const filtered = countries.filter(c => 
+            c.name.toLowerCase().includes(value) || 
+            c.koName.toLowerCase().includes(value)
+        ).slice(0, 10);
+
+        if (filtered.length > 0) {
+            elements.countryDropdown.innerHTML = filtered.map(c => `
+                <div class="dropdown-item" data-code="${c.code}">
+                    <img src="${c.flag}" class="dropdown-flag">
+                    <span>${c.name} (${c.koName})</span>
+                </div>
+            `).join('');
+            elements.countryDropdown.style.display = 'block';
+
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.onclick = () => {
+                    const country = countries.find(c => c.code === item.dataset.code);
+                    elements.countrySearch.value = country.name;
+                    elements.countryDropdown.style.display = 'none';
+                    onSelect(country);
+                };
+            });
+        } else {
+            elements.countryDropdown.style.display = 'none';
+        }
+    };
+
+    // Close dropdown on click outside
+    document.addEventListener('click', (e) => {
+        const searchBox = document.querySelector('.search-container');
+        if (searchBox && !searchBox.contains(e.target)) {
+            elements.countryDropdown.style.display = 'none';
+        }
+    });
 }
 
 export function showRegions(countryKey, currentLang) {

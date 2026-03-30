@@ -1,15 +1,25 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>East Asian Culture Guide</title>
+    <title>World Trip Guide Service</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-theme="light">
+    <div class="bg-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+    <div class="noise-overlay"></div>
 
     <header>
         <h1 id="pageTitle">🌏 Culture Guide</h1>
+        <div class="search-container">
+            <input type="text" id="countrySearch" placeholder="Search country..." aria-label="Search Country">
+            <div id="countryDropdown" class="country-dropdown" style="display: none;"></div>
+        </div>
         <div class="controls">
             <button id="langToggle" class="lang-toggle" aria-label="Switch Language">
                 English
@@ -20,23 +30,12 @@
         </div>
     </header>
 
-    <nav id="navBar">
-        <button class="nav-btn" data-country="korea" id="btnKorea"><img src="https://flagcdn.com/w20/kr.png" class="nav-flag" alt=""> South Korea</button>
-        <button class="nav-btn" data-country="china" id="btnChina"><img src="https://flagcdn.com/w20/cn.png" class="nav-flag" alt=""> China</button>
-        <button class="nav-btn" data-country="japan" id="btnJapan"><img src="https://flagcdn.com/w20/jp.png" class="nav-flag" alt=""> Japan</button>
-        <button class="nav-btn" data-country="france" id="btnFrance"><img src="https://flagcdn.com/w20/fr.png" class="nav-flag" alt=""> France</button>
-        <button class="nav-btn" data-country="spain" id="btnSpain"><img src="https://flagcdn.com/w20/es.png" class="nav-flag" alt=""> Spain</button>
-        <button class="nav-btn" data-country="usa" id="btnUSA"><img src="https://flagcdn.com/w20/us.png" class="nav-flag" alt=""> USA</button>
-        <button class="nav-btn" data-country="turkey" id="btnTurkey"><img src="https://flagcdn.com/w20/tr.png" class="nav-flag" alt=""> Turkey</button>
-        <button class="nav-btn" data-country="italy" id="btnItaly"><img src="https://flagcdn.com/w20/it.png" class="nav-flag" alt=""> Italy</button>
-        <button class="nav-btn" data-country="mexico" id="btnMexico"><img src="https://flagcdn.com/w20/mx.png" class="nav-flag" alt=""> Mexico</button>
-        <button class="nav-btn" data-country="uk" id="btnUK"><img src="https://flagcdn.com/w20/gb.png" class="nav-flag" alt=""> UK</button>
-        <button class="nav-btn" data-country="germany" id="btnGermany"><img src="https://flagcdn.com/w20/de.png" class="nav-flag" alt=""> Germany</button>
-        <button class="nav-btn" data-country="greece" id="btnGreece"><img src="https://flagcdn.com/w20/gr.png" class="nav-flag" alt=""> Greece</button>
-    </nav>
+    <div id="navBar" style="display: none;">
+        <!-- Hidden but kept for backward compatibility if needed -->
+    </div>
 
     <main id="content">
-        <!-- Content will be injected here by main.js -->
+        <!-- Content will be injected here by ui.js -->
     </main>
 
     <footer>
