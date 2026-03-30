@@ -19,6 +19,42 @@ export const cultures = {
                         { name: "쮸즈 (가로수길)", url: "https://www.google.com/maps/search/쮸즈+가로수길" },
                         { name: "밍글스 (강남)", url: "https://www.google.com/maps/search/밍글스+강남" },
                         { name: "모수서울 (용산)", url: "https://www.google.com/maps/search/모수서울+용산" }
+                    ],
+                    cafe: [
+                        { name: "카페어니언 (안국)", url: "https://www.google.com/maps/search/카페어니언+안국" },
+                        { name: "누데이크 (성수)", url: "https://www.google.com/maps/search/누데이크+성수" },
+                        { name: "잼잼 (연남)", url: "https://www.google.com/maps/search/잼잼+연남" },
+                        { name: "관훈갤러리카페 (인사동)", url: "https://www.google.com/maps/search/관훈갤러리카페+인사동" },
+                        { name: "5to7 (성수)", url: "https://www.google.com/maps/search/5to7+성수" },
+                        { name: "구욱희씨 (서울숲)", url: "https://www.google.com/maps/search/구욱희씨+서울숲" },
+                        { name: "런던베이글뮤지엄 (안국)", url: "https://www.google.com/maps/search/런던베이글뮤지엄+안국" },
+                        { name: "아우프글렛 (금호)", url: "https://www.google.com/maps/search/아우프글렛+금호" },
+                        { name: "텅 (창덕궁)", url: "https://www.google.com/maps/search/텅+창덕궁" },
+                        { name: "매일카페 (연남)", url: "https://www.google.com/maps/search/매일카페+연남" }
+                    ],
+                    landmark: [
+                        { name: "경복궁 (종로)", url: "https://www.google.com/maps/search/경복궁" },
+                        { name: "N서울타워 (남산)", url: "https://www.google.com/maps/search/N서울타워" },
+                        { name: "성수동카페거리 (성수)", url: "https://www.google.com/maps/search/성수동카페거리" },
+                        { name: "롯데월드타워 (잠실)", url: "https://www.google.com/maps/search/롯데월드타워" },
+                        { name: "북촌한옥마을 (가회동)", url: "https://www.google.com/maps/search/북촌한옥마을" },
+                        { name: "별마당도서관 (코엑스)", url: "https://www.google.com/maps/search/별마당도서관" },
+                        { name: "청계천 (광화문)", url: "https://www.google.com/maps/search/청계천" },
+                        { name: "익선동 (종로)", url: "https://www.google.com/maps/search/익선동" },
+                        { name: "DDP (동대문)", url: "https://www.google.com/maps/search/DDP" },
+                        { name: "홍대거리 (마포)", url: "https://www.google.com/maps/search/홍대거리" }
+                    ],
+                    activity: [
+                        { name: "한강피크닉 (여의도)", url: "https://www.google.com/maps/search/여의도한강공원" },
+                        { name: "한복체험 (경복궁)", url: "https://www.google.com/maps/search/경복궁+한복체험" },
+                        { name: "롯데월드 (잠실)", url: "https://www.google.com/maps/search/롯데월드" },
+                        { name: "퍼스널컬러진단 (명동)", url: "https://www.google.com/maps/search/명동+퍼스널컬러진단" },
+                        { name: "난타공연 (명동)", url: "https://www.google.com/maps/search/명동난타극장" },
+                        { name: "향수공방 (성수)", url: "https://www.google.com/maps/search/성수동+향수공방" },
+                        { name: "DMZ투어 (임진각)", url: "https://www.google.com/maps/search/임진각+DMZ투어" },
+                        { name: "재즈바 (종로)", url: "https://www.google.com/maps/search/종로+재즈바" },
+                        { name: "실탄사격 (명동)", url: "https://www.google.com/maps/search/명동+실탄사격" },
+                        { name: "리얼월드 (성수)", url: "https://www.google.com/maps/search/리얼월드+성수" }
                     ]
                 }
             },
