@@ -108,6 +108,8 @@ export function renderContent(country, currentLang) {
 }
 
 export function setupSearch(countries, onSelect) {
+    if (!elements.countrySearch) return;
+
     elements.countrySearch.oninput = (e) => {
         const value = e.target.value.toLowerCase();
         if (!value) {
@@ -144,9 +146,11 @@ export function setupSearch(countries, onSelect) {
 
     // Close dropdown on click outside
     document.addEventListener('click', (e) => {
-        const searchBox = document.querySelector('.search-container');
-        if (searchBox && !searchBox.contains(e.target)) {
-            elements.countryDropdown.style.display = 'none';
+        const searchContainer = document.querySelector('.search-container');
+        if (searchContainer && !searchContainer.contains(e.target)) {
+            if (elements.countryDropdown) {
+                elements.countryDropdown.style.display = 'none';
+            }
         }
     });
 }
