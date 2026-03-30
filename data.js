@@ -58,7 +58,59 @@ export const cultures = {
                     ]
                 }
             },
-            { en: "Gyeonggi-do", ko: "경기도" },
+            { 
+                en: "Gyeonggi-do", ko: "경기도",
+                themes: {
+                    restaurant: [
+                        { name: "가보정 (수원)", url: "https://www.google.com/maps/search/가보정+수원" },
+                        { name: "을밀대 (일산)", url: "https://www.google.com/maps/search/을밀대+일산" },
+                        { name: "기와집순두부 (남양주)", url: "https://www.google.com/maps/search/기와집순두부+남양주" },
+                        { name: "서오릉신호등장작구이 (고양)", url: "https://www.google.com/maps/search/서오릉신호등장작구이" },
+                        { name: "장수촌 (의왕)", url: "https://www.google.com/maps/search/장수촌+의왕" },
+                        { name: "옥천냉면 (양평)", url: "https://www.google.com/maps/search/옥천냉면+양평" },
+                        { name: "춘궁동보리밥 (하남)", url: "https://www.google.com/maps/search/춘궁동보리밥" },
+                        { name: "고기리막국수 (용인)", url: "https://www.google.com/maps/search/고기리막국수" },
+                        { name: "신당동즉석떡볶이 (구리)", url: "https://www.google.com/maps/search/신당동즉석떡볶이+구리" },
+                        { name: "쌈밥전문정가네 (광주)", url: "https://www.google.com/maps/search/쌈밥전문정가네+광주" }
+                    ],
+                    cafe: [
+                        { name: "더티트렁크 (파주)", url: "https://www.google.com/maps/search/더티트렁크+파주" },
+                        { name: "묵리459 (용인)", url: "https://www.google.com/maps/search/묵리459" },
+                        { name: "폴콘 (양주)", url: "https://www.google.com/maps/search/폴콘+양주" },
+                        { name: "포레스트아웃팅스 (고양)", url: "https://www.google.com/maps/search/포레스트아웃팅스+고양" },
+                        { name: "카페아를 (의정부)", url: "https://www.google.com/maps/search/카페아를" },
+                        { name: "대부도카페DBB (안산)", url: "https://www.google.com/maps/search/대부도카페DBB" },
+                        { name: "나인블럭 (광주)", url: "https://www.google.com/maps/search/나인블럭+광주" },
+                        { name: "옐로커피 (일산)", url: "https://www.google.com/maps/search/옐로커피" },
+                        { name: "베이커리씨어터 (남양주)", url: "https://www.google.com/maps/search/베이커리씨어터" },
+                        { name: "테라로사 (양평)", url: "https://www.google.com/maps/search/테라로사+양평" }
+                    ],
+                    landmark: [
+                        { name: "수원화성 (수원)", url: "https://www.google.com/maps/search/수원화성" },
+                        { name: "에버랜드 (용인)", url: "https://www.google.com/maps/search/에버랜드" },
+                        { name: "임진각평화누리 (파주)", url: "https://www.google.com/maps/search/임진각평화누리" },
+                        { name: "아침고요수목원 (가평)", url: "https://www.google.com/maps/search/아침고요수목원" },
+                        { name: "한국민속촌 (용인)", url: "https://www.google.com/maps/search/한국민속촌" },
+                        { name: "두물머리 (양평)", url: "https://www.google.com/maps/search/두물머리" },
+                        { name: "광명동굴 (광명)", url: "https://www.google.com/maps/search/광명동굴" },
+                        { name: "행주산성 (고양)", url: "https://www.google.com/maps/search/행주산성" },
+                        { name: "남한산성 (광주)", url: "https://www.google.com/maps/search/남한산성" },
+                        { name: "대부도 (안산)", url: "https://www.google.com/maps/search/대부도" }
+                    ],
+                    activity: [
+                        { name: "루지체험 (가평)", url: "https://www.google.com/maps/search/가평+루지체험" },
+                        { name: "스타필드아쿠아필드 (하남)", url: "https://www.google.com/maps/search/스타필드아쿠아필드+하남" },
+                        { name: "짚라인 (용인)", url: "https://www.google.com/maps/search/용인+짚라인" },
+                        { name: "요트체험 (화성)", url: "https://www.google.com/maps/search/화성+요트체험" },
+                        { name: "쁘띠프랑스 (가평)", url: "https://www.google.com/maps/search/쁘띠프랑스" },
+                        { name: "헤이리예술마을 (파주)", url: "https://www.google.com/maps/search/헤이리예술마을" },
+                        { name: "웅진플레이도시 (부천)", url: "https://www.google.com/maps/search/웅진플레이도시" },
+                        { name: "캠핑&글램핑 (가평)", url: "https://www.google.com/maps/search/가평+글램핑" },
+                        { name: "레일바이크 (의왕)", url: "https://www.google.com/maps/search/의왕+레일바이크" },
+                        { name: "패러글라이딩 (양평)", url: "https://www.google.com/maps/search/양평+패러글라이딩" }
+                    ]
+                }
+            },
             { en: "Gangwon-do", ko: "강원도" },
             { en: "Chungcheong-do", ko: "충청도" },
             { en: "Jeolla-do", ko: "전라도" },
