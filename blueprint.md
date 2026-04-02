@@ -33,5 +33,6 @@ A framework-less web application (HTML, CSS, JS) that provides a guide to ALL wo
 *   [x] Add famous restaurants, cafes, landmarks, and activities for Gangwon-do in `data1.js`.
 *   [x] Ensure Google Maps search links are included for each item.
 *   [x] Maintain consistency with existing region data structures.
-*   [x] Fix syntax errors and alignment in `data1.js`.
-*   [x] Correct Google Maps links for all other Korean regions.
+*   [x] Fix syntax errors and structural inconsistencies across `data1.js`, `data2.js`, `data3.js`, and `data4.js`.
+*   [x] Normalize Google Maps links across all regions (ensure they match the name field).
+*   [x] Restore detailed country data (restaurants, cafes, landmarks, activities) in all data files.

@@ -4,7 +4,7 @@
     --text-color: #f8fafc;
     --header-bg: rgba(15, 23, 42, 0.7);
     --card-bg: rgba(30, 41, 59, 0.6);
-    --primary-color: #60a5fa;
+    --primary-color: #cbd5e1;
     --accent-color: #f87171;
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -753,7 +753,7 @@ footer {
     gap: 10px;
 }
 
-.theme-item-link {
+.theme-item-link, .theme-item-link:visited {
     display: block;
     padding: 12px 18px;
     background: var(--card-bg);
@@ -767,7 +767,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.theme-item-link:hover {
+.theme-item-link:hover, .theme-item-link:active {
     background: var(--primary-color);
     color: white;
     transform: translateX(8px);
