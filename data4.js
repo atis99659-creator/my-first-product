@@ -187,44 +187,1645 @@ export const data4 = {
         en: { name: "Germany", greeting: "Hallo", food: "Pretzel, Schnitzel", clothing: "Lederhosen", description: "Known for its engineering, beer, and historical cities." },
         ko: { name: "독일", greeting: "할로", food: "프레첼, 슈니첼", clothing: "레더호젠", description: "공학, 맥주, 그리고 역사적인 도시들로 유명합니다." },
         emoji: "🇩🇪", color: "#34495e", code: "de",
-        regions: [
-            { en: "Bavaria", ko: "바이에른" },
-            { en: "North Rhine-Westphalia", ko: "노르트라인-베스트팔렌" },
-            { en: "Baden-Württemberg", ko: "바덴-뷔르템베르크" },
-            { en: "Hesse", ko: "헤센" },
-            { en: "Lower Saxony", ko: "니더작센" },
-            { en: "Saxony", ko: "작센" },
-            { en: "Rhineland-Palatinate", ko: "라인란트-팔츠" },
-            { en: "Schleswig-Holstein", ko: "슐레스비히-홀슈타인" },
-            { en: "Brandenburg", ko: "브란덴부르크" },
-            { en: "Mecklenburg-Vorpommern", ko: "메클렌부르크-포어포메른" },
-            { en: "Thuringia", ko: "튀링겐" },
-            { en: "Saxony-Anhalt", ko: "작센-안할트" },
-            { en: "Saarland", ko: "자를란트" },
-            { en: "Berlin", ko: "베를린" },
-            { en: "Hamburg", ko: "함부르크" },
-            { en: "Bremen", ko: "브레멘" }
-        ]
+        regions: [[
+            {
+                        "en": "Bavaria",
+                        "ko": "바이에른",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "호프브로이하우스 (뮌헨)",
+                                                            "url": "https://www.google.com/maps/search/호프브로이하우스 (뮌헨)"
+                                                },
+                                                {
+                                                            "name": "아우구스티너 켈러 (뮌헨)",
+                                                            "url": "https://www.google.com/maps/search/아우구스티너 켈러 (뮌헨)"
+                                                },
+                                                {
+                                                            "name": "부르스트큐히 (레겐스부르크)",
+                                                            "url": "https://www.google.com/maps/search/부르스트큐히 (레겐스부르크)"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "카페 루이폴트 (뮌헨)",
+                                                            "url": "https://www.google.com/maps/search/카페 루이폴트 (뮌헨)"
+                                                },
+                                                {
+                                                            "name": "카페 마인를 (로텐부르크)",
+                                                            "url": "https://www.google.com/maps/search/카페 마인를 (로텐부르크)"
+                                                },
+                                                {
+                                                            "name": "달마이어 (뮌헨델리)",
+                                                            "url": "https://www.google.com/maps/search/달마이어 (뮌헨델리)"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "노이슈반슈타인 성",
+                                                            "url": "https://www.google.com/maps/search/노이슈반슈타인 성"
+                                                },
+                                                {
+                                                            "name": "뮌헨 마리엔 광장",
+                                                            "url": "https://www.google.com/maps/search/뮌헨 마리엔 광장"
+                                                },
+                                                {
+                                                            "name": "추크슈피체 산",
+                                                            "url": "https://www.google.com/maps/search/추크슈피체 산"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "옥토버페스트 축제 체험",
+                                                            "url": "https://www.google.com/maps/search/옥토버페스트 축제 체험"
+                                                },
+                                                {
+                                                            "name": "로맨틱 가도 드라이브",
+                                                            "url": "https://www.google.com/maps/search/로맨틱 가도 드라이브"
+                                                },
+                                                {
+                                                            "name": "바이에른 알프스 하이킹",
+                                                            "url": "https://www.google.com/maps/search/바이에른 알프스 하이킹"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "North Rhine-Westphalia",
+                        "ko": "노르트라인-베스트팔렌",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "North Rhine-Westphalia 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 전통 식당"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "North Rhine-Westphalia 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 유명 카페"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 로스터리",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 로스터리"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 베이커리",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "North Rhine-Westphalia 성당",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 성당"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 광장",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 광장"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 박물관",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "North Rhine-Westphalia 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 시티 투어"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "North Rhine-Westphalia 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/North Rhine-Westphalia 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Baden-Württemberg",
+                        "ko": "바덴-뷔르템베르크",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Baden-Württemberg 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Baden-Württemberg 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 로스터리"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Baden-Württemberg 성당",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 성당"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 광장",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 광장"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 박물관",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Baden-Württemberg 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Baden-Württemberg 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Baden-Württemberg 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Hesse",
+                        "ko": "헤센",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Hesse 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Hesse 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Hesse 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Hesse 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Hesse 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Hesse 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Hesse 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Hesse 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Hesse 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Hesse 로스터리"
+                                                },
+                                                {
+                                                            "name": "Hesse 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Hesse 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Hesse 성당",
+                                                            "url": "https://www.google.com/maps/search/Hesse 성당"
+                                                },
+                                                {
+                                                            "name": "Hesse 광장",
+                                                            "url": "https://www.google.com/maps/search/Hesse 광장"
+                                                },
+                                                {
+                                                            "name": "Hesse 박물관",
+                                                            "url": "https://www.google.com/maps/search/Hesse 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Hesse 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Hesse 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Hesse 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Hesse 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Hesse 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Hesse 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Lower Saxony",
+                        "ko": "니더작센",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Lower Saxony 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Lower Saxony 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 로스터리"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Lower Saxony 성당",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 성당"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 광장",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 광장"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 박물관",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Lower Saxony 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Lower Saxony 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Lower Saxony 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Saxony",
+                        "ko": "작센",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Saxony 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Saxony 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Saxony 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Saxony 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Saxony 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Saxony 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Saxony 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Saxony 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Saxony 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Saxony 로스터리"
+                                                },
+                                                {
+                                                            "name": "Saxony 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Saxony 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Saxony 성당",
+                                                            "url": "https://www.google.com/maps/search/Saxony 성당"
+                                                },
+                                                {
+                                                            "name": "Saxony 광장",
+                                                            "url": "https://www.google.com/maps/search/Saxony 광장"
+                                                },
+                                                {
+                                                            "name": "Saxony 박물관",
+                                                            "url": "https://www.google.com/maps/search/Saxony 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Saxony 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Saxony 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Saxony 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Saxony 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Saxony 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Saxony 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Rhineland-Palatinate",
+                        "ko": "라인란트-팔츠",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Rhineland-Palatinate 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Rhineland-Palatinate 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 로스터리"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Rhineland-Palatinate 성당",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 성당"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 광장",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 광장"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 박물관",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Rhineland-Palatinate 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Rhineland-Palatinate 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Rhineland-Palatinate 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Schleswig-Holstein",
+                        "ko": "슐레스비히-홀슈타인",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Schleswig-Holstein 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Schleswig-Holstein 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 로스터리"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Schleswig-Holstein 성당",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 성당"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 광장",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 광장"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 박물관",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Schleswig-Holstein 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Schleswig-Holstein 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Schleswig-Holstein 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Brandenburg",
+                        "ko": "브란덴부르크",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Brandenburg 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Brandenburg 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 로스터리"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Brandenburg 성당",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 성당"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 광장",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 광장"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 박물관",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Brandenburg 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Brandenburg 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Brandenburg 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Mecklenburg-Vorpommern",
+                        "ko": "메클렌부르크-포어포메른",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 로스터리"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 성당",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 성당"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 광장",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 광장"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 박물관",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Mecklenburg-Vorpommern 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Mecklenburg-Vorpommern 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Thuringia",
+                        "ko": "튀링겐",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Thuringia 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Thuringia 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Thuringia 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Thuringia 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Thuringia 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 로스터리"
+                                                },
+                                                {
+                                                            "name": "Thuringia 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Thuringia 성당",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 성당"
+                                                },
+                                                {
+                                                            "name": "Thuringia 광장",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 광장"
+                                                },
+                                                {
+                                                            "name": "Thuringia 박물관",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Thuringia 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Thuringia 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Thuringia 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Thuringia 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Saxony-Anhalt",
+                        "ko": "작센-안할트",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Saxony-Anhalt 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Saxony-Anhalt 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 로스터리"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Saxony-Anhalt 성당",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 성당"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 광장",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 광장"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 박물관",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Saxony-Anhalt 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Saxony-Anhalt 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Saxony-Anhalt 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Saarland",
+                        "ko": "자를란트",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Saarland 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Saarland 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Saarland 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Saarland 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Saarland 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Saarland 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Saarland 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Saarland 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Saarland 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Saarland 로스터리"
+                                                },
+                                                {
+                                                            "name": "Saarland 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Saarland 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Saarland 성당",
+                                                            "url": "https://www.google.com/maps/search/Saarland 성당"
+                                                },
+                                                {
+                                                            "name": "Saarland 광장",
+                                                            "url": "https://www.google.com/maps/search/Saarland 광장"
+                                                },
+                                                {
+                                                            "name": "Saarland 박물관",
+                                                            "url": "https://www.google.com/maps/search/Saarland 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Saarland 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Saarland 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Saarland 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Saarland 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Saarland 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Saarland 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Berlin",
+                        "ko": "베를린",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "무스타파 데미르 (케밥)",
+                                                            "url": "https://www.google.com/maps/search/무스타파 데미르 (케밥)"
+                                                },
+                                                {
+                                                            "name": "콘놉케스 임비스 (커리부르스트)",
+                                                            "url": "https://www.google.com/maps/search/콘놉케스 임비스 (커리부르스트)"
+                                                },
+                                                {
+                                                            "name": "로카 (베를린)",
+                                                            "url": "https://www.google.com/maps/search/로카 (베를린)"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "카페 아인슈타인 스타우멘",
+                                                            "url": "https://www.google.com/maps/search/카페 아인슈타인 스타우멘"
+                                                },
+                                                {
+                                                            "name": "더 바너 (스페셜티 커피)",
+                                                            "url": "https://www.google.com/maps/search/더 바너 (스페셜티 커피)"
+                                                },
+                                                {
+                                                            "name": "카페 노이 (베를린)",
+                                                            "url": "https://www.google.com/maps/search/카페 노이 (베를린)"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "브란덴부르크 문",
+                                                            "url": "https://www.google.com/maps/search/브란덴부르크 문"
+                                                },
+                                                {
+                                                            "name": "베를린 장벽 (이스트 사이드 갤러리)",
+                                                            "url": "https://www.google.com/maps/search/베를린 장벽 (이스트 사이드 갤러리)"
+                                                },
+                                                {
+                                                            "name": "국회의사당 (라이히스타크)",
+                                                            "url": "https://www.google.com/maps/search/국회의사당 (라이히스타크)"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "박물관 섬 관람",
+                                                            "url": "https://www.google.com/maps/search/박물관 섬 관람"
+                                                },
+                                                {
+                                                            "name": "베를린 필하모닉 공연 감상",
+                                                            "url": "https://www.google.com/maps/search/베를린 필하모닉 공연 감상"
+                                                },
+                                                {
+                                                            "name": "슈프레강 보트 투어",
+                                                            "url": "https://www.google.com/maps/search/슈프레강 보트 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Hamburg",
+                        "ko": "함부르크",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Hamburg 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Hamburg 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Hamburg 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Hamburg 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Hamburg 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 로스터리"
+                                                },
+                                                {
+                                                            "name": "Hamburg 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Hamburg 성당",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 성당"
+                                                },
+                                                {
+                                                            "name": "Hamburg 광장",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 광장"
+                                                },
+                                                {
+                                                            "name": "Hamburg 박물관",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Hamburg 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Hamburg 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Hamburg 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Hamburg 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Bremen",
+                        "ko": "브레멘",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Bremen 지역 맛집",
+                                                            "url": "https://www.google.com/maps/search/Bremen 지역 맛집"
+                                                },
+                                                {
+                                                            "name": "Bremen 전통 식당",
+                                                            "url": "https://www.google.com/maps/search/Bremen 전통 식당"
+                                                },
+                                                {
+                                                            "name": "Bremen 로컬 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/Bremen 로컬 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "Bremen 유명 카페",
+                                                            "url": "https://www.google.com/maps/search/Bremen 유명 카페"
+                                                },
+                                                {
+                                                            "name": "Bremen 로스터리",
+                                                            "url": "https://www.google.com/maps/search/Bremen 로스터리"
+                                                },
+                                                {
+                                                            "name": "Bremen 베이커리",
+                                                            "url": "https://www.google.com/maps/search/Bremen 베이커리"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Bremen 성당",
+                                                            "url": "https://www.google.com/maps/search/Bremen 성당"
+                                                },
+                                                {
+                                                            "name": "Bremen 광장",
+                                                            "url": "https://www.google.com/maps/search/Bremen 광장"
+                                                },
+                                                {
+                                                            "name": "Bremen 박물관",
+                                                            "url": "https://www.google.com/maps/search/Bremen 박물관"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Bremen 시티 투어",
+                                                            "url": "https://www.google.com/maps/search/Bremen 시티 투어"
+                                                },
+                                                {
+                                                            "name": "Bremen 하이킹 코스",
+                                                            "url": "https://www.google.com/maps/search/Bremen 하이킹 코스"
+                                                },
+                                                {
+                                                            "name": "Bremen 로컬 마켓 방문",
+                                                            "url": "https://www.google.com/maps/search/Bremen 로컬 마켓 방문"
+                                                }
+                                    ]
+                        }
+            }
+]]
     },
     greece: {
         en: { name: "Greece", greeting: "Yasas", food: "Moussaka, Gyros", clothing: "Chiton", description: "The cradle of Western civilization and beautiful islands." },
         ko: { name: "그리스", greeting: "야사스", food: "무사카, 기로스", clothing: "키톤", description: "서구 문명의 발상지와 아름다운 섬들로 유명합니다." },
         emoji: "🇬🇷", color: "#2980b9", code: "gr",
-        regions: [
-            { en: "Attica", ko: "아티키" },
-            { en: "Central Macedonia", ko: "중앙 마케도니아" },
-            { en: "Crete", ko: "크레타" },
-            { en: "South Aegean", ko: "남에게" },
-            { en: "North Aegean", ko: "북에게" },
-            { en: "Ionian Islands", ko: "이오니아 제도" },
-            { en: "Peloponnese", ko: "펠로폰네소스" },
-            { en: "West Macedonia", ko: "서마케도니아" },
-            { en: "East Macedonia and Thrace", ko: "동마케도니아-트라키아" },
-            { en: "Epirus", ko: "에피루스" },
-            { en: "Thessaly", ko: "테살리아" },
-            { en: "Central Greece", ko: "중앙그리스" },
-            { en: "West Greece", ko: "서그리스" }
-        ]
+        regions: [[
+            {
+                        "en": "Attica",
+                        "ko": "아티키",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "디아니소스 존나라스 (아크로폴리스 뷰)",
+                                                            "url": "https://www.google.com/maps/search/디아니소스 존나라스 (아크로폴리스 뷰)"
+                                                },
+                                                {
+                                                            "name": "타나시스 (수블라키/케밥)",
+                                                            "url": "https://www.google.com/maps/search/타나시스 (수블라키/케밥)"
+                                                },
+                                                {
+                                                            "name": "쿠지나 레스토랑",
+                                                            "url": "https://www.google.com/maps/search/쿠지나 레스토랑"
+                                                }
+                                    ],
+                                    "cafe": [
+                                                {
+                                                            "name": "야스미 카페 (아테네)",
+                                                            "url": "https://www.google.com/maps/search/야스미 카페 (아테네)"
+                                                },
+                                                {
+                                                            "name": "리틀 트리 북스 & 커피",
+                                                            "url": "https://www.google.com/maps/search/리틀 트리 북스 & 커피"
+                                                },
+                                                {
+                                                            "name": "브렛토스 디스틸러리/바",
+                                                            "url": "https://www.google.com/maps/search/브렛토스 디스틸러리/바"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "아크로폴리스 & 파르테논 신전",
+                                                            "url": "https://www.google.com/maps/search/아크로폴리스 & 파르테논 신전"
+                                                },
+                                                {
+                                                            "name": "플라카 지구",
+                                                            "url": "https://www.google.com/maps/search/플라카 지구"
+                                                },
+                                                {
+                                                            "name": "수니온 곶 (포세이돈 신전)",
+                                                            "url": "https://www.google.com/maps/search/수니온 곶 (포세이돈 신전)"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "아테네 고고학 박물관 투어",
+                                                            "url": "https://www.google.com/maps/search/아테네 고고학 박물관 투어"
+                                                },
+                                                {
+                                                            "name": "아테네 아고라 산책",
+                                                            "url": "https://www.google.com/maps/search/아테네 아고라 산책"
+                                                },
+                                                {
+                                                            "name": "아레오파고스 언덕 야경 감상",
+                                                            "url": "https://www.google.com/maps/search/아레오파고스 언덕 야경 감상"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Central Macedonia",
+                        "ko": "중앙 마케도니아",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Central Macedonia 타베르나",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 타베르나"
+                                                },
+                                                {
+                                                            "name": "Central Macedonia 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "Central Macedonia 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Central Macedonia 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "Central Macedonia 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 해수욕장"
+                                                },
+                                                {
+                                                            "name": "Central Macedonia 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Central Macedonia 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "Central Macedonia 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "Central Macedonia 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/Central Macedonia 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Crete",
+                        "ko": "크레타",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "페스카스 (헤라클리온 해산물)",
+                                                            "url": "https://www.google.com/maps/search/페스카스 (헤라클리온 해산물)"
+                                                },
+                                                {
+                                                            "name": "크리티코스 (크레타 전통 요리)",
+                                                            "url": "https://www.google.com/maps/search/크리티코스 (크레타 전통 요리)"
+                                                },
+                                                {
+                                                            "name": "타마암 (하니아)",
+                                                            "url": "https://www.google.com/maps/search/타마암 (하니아)"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "크노소스 궁전 유적",
+                                                            "url": "https://www.google.com/maps/search/크노소스 궁전 유적"
+                                                },
+                                                {
+                                                            "name": "사마리아 협곡",
+                                                            "url": "https://www.google.com/maps/search/사마리아 협곡"
+                                                },
+                                                {
+                                                            "name": "엘라포니시 핑크 비치",
+                                                            "url": "https://www.google.com/maps/search/엘라포니시 핑크 비치"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "크레타 와이너리 투어",
+                                                            "url": "https://www.google.com/maps/search/크레타 와이너리 투어"
+                                                },
+                                                {
+                                                            "name": "하니아 구시가지 산책",
+                                                            "url": "https://www.google.com/maps/search/하니아 구시가지 산책"
+                                                },
+                                                {
+                                                            "name": "스피날롱가 섬 보트 투어",
+                                                            "url": "https://www.google.com/maps/search/스피날롱가 섬 보트 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "South Aegean",
+                        "ko": "남에게",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "South Aegean 타베르나",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 타베르나"
+                                                },
+                                                {
+                                                            "name": "South Aegean 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "South Aegean 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "South Aegean 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "South Aegean 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 해수욕장"
+                                                },
+                                                {
+                                                            "name": "South Aegean 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "South Aegean 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "South Aegean 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "South Aegean 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/South Aegean 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "North Aegean",
+                        "ko": "북에게",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "North Aegean 타베르나",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 타베르나"
+                                                },
+                                                {
+                                                            "name": "North Aegean 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "North Aegean 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "North Aegean 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "North Aegean 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 해수욕장"
+                                                },
+                                                {
+                                                            "name": "North Aegean 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "North Aegean 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "North Aegean 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "North Aegean 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/North Aegean 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Ionian Islands",
+                        "ko": "이오니아 제도",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Ionian Islands 타베르나",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 타베르나"
+                                                },
+                                                {
+                                                            "name": "Ionian Islands 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "Ionian Islands 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Ionian Islands 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "Ionian Islands 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 해수욕장"
+                                                },
+                                                {
+                                                            "name": "Ionian Islands 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Ionian Islands 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "Ionian Islands 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "Ionian Islands 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/Ionian Islands 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Peloponnese",
+                        "ko": "펠로폰네소스",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Peloponnese 타베르나",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 타베르나"
+                                                },
+                                                {
+                                                            "name": "Peloponnese 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "Peloponnese 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Peloponnese 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "Peloponnese 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 해수욕장"
+                                                },
+                                                {
+                                                            "name": "Peloponnese 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Peloponnese 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "Peloponnese 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "Peloponnese 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/Peloponnese 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "West Macedonia",
+                        "ko": "서마케도니아",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "West Macedonia 타베르나",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 타베르나"
+                                                },
+                                                {
+                                                            "name": "West Macedonia 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "West Macedonia 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "West Macedonia 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "West Macedonia 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 해수욕장"
+                                                },
+                                                {
+                                                            "name": "West Macedonia 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "West Macedonia 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "West Macedonia 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "West Macedonia 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/West Macedonia 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "East Macedonia and Thrace",
+                        "ko": "동마케도니아-트라키아",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "East Macedonia and Thrace 타베르나",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 타베르나"
+                                                },
+                                                {
+                                                            "name": "East Macedonia and Thrace 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "East Macedonia and Thrace 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "East Macedonia and Thrace 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "East Macedonia and Thrace 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 해수욕장"
+                                                },
+                                                {
+                                                            "name": "East Macedonia and Thrace 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "East Macedonia and Thrace 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "East Macedonia and Thrace 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "East Macedonia and Thrace 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/East Macedonia and Thrace 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Epirus",
+                        "ko": "에피루스",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Epirus 타베르나",
+                                                            "url": "https://www.google.com/maps/search/Epirus 타베르나"
+                                                },
+                                                {
+                                                            "name": "Epirus 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/Epirus 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "Epirus 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/Epirus 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Epirus 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/Epirus 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "Epirus 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/Epirus 해수욕장"
+                                                },
+                                                {
+                                                            "name": "Epirus 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/Epirus 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Epirus 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/Epirus 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "Epirus 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/Epirus 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "Epirus 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/Epirus 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Thessaly",
+                        "ko": "테살리아",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Thessaly 타베르나",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 타베르나"
+                                                },
+                                                {
+                                                            "name": "Thessaly 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "Thessaly 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Thessaly 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "Thessaly 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 해수욕장"
+                                                },
+                                                {
+                                                            "name": "Thessaly 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Thessaly 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "Thessaly 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "Thessaly 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/Thessaly 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "Central Greece",
+                        "ko": "중앙그리스",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "Central Greece 타베르나",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 타베르나"
+                                                },
+                                                {
+                                                            "name": "Central Greece 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "Central Greece 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "Central Greece 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "Central Greece 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 해수욕장"
+                                                },
+                                                {
+                                                            "name": "Central Greece 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "Central Greece 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "Central Greece 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "Central Greece 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/Central Greece 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            },
+            {
+                        "en": "West Greece",
+                        "ko": "서그리스",
+                        "themes": {
+                                    "restaurant": [
+                                                {
+                                                            "name": "West Greece 타베르나",
+                                                            "url": "https://www.google.com/maps/search/West Greece 타베르나"
+                                                },
+                                                {
+                                                            "name": "West Greece 해산물 식당",
+                                                            "url": "https://www.google.com/maps/search/West Greece 해산물 식당"
+                                                },
+                                                {
+                                                            "name": "West Greece 전통 구이 전문점",
+                                                            "url": "https://www.google.com/maps/search/West Greece 전통 구이 전문점"
+                                                }
+                                    ],
+                                    "landmark": [
+                                                {
+                                                            "name": "West Greece 고대 유적지",
+                                                            "url": "https://www.google.com/maps/search/West Greece 고대 유적지"
+                                                },
+                                                {
+                                                            "name": "West Greece 해수욕장",
+                                                            "url": "https://www.google.com/maps/search/West Greece 해수욕장"
+                                                },
+                                                {
+                                                            "name": "West Greece 비잔틴 성당",
+                                                            "url": "https://www.google.com/maps/search/West Greece 비잔틴 성당"
+                                                }
+                                    ],
+                                    "activity": [
+                                                {
+                                                            "name": "West Greece 섬 일주 투어",
+                                                            "url": "https://www.google.com/maps/search/West Greece 섬 일주 투어"
+                                                },
+                                                {
+                                                            "name": "West Greece 스노클링 체험",
+                                                            "url": "https://www.google.com/maps/search/West Greece 스노클링 체험"
+                                                },
+                                                {
+                                                            "name": "West Greece 로컬 마켓 투어",
+                                                            "url": "https://www.google.com/maps/search/West Greece 로컬 마켓 투어"
+                                                }
+                                    ]
+                        }
+            }
+]]
     }
 };
 
