@@ -29,10 +29,8 @@ A framework-less web application (HTML, CSS, JS) that provides a guide to ALL wo
 *   [ ] Add more detailed cultural info for countries beyond the original 12 (Greetings, Food, Clothing) using additional APIs if possible.
 *   [ ] Improve search performance and UX (e.g., keyboard navigation).
 
-## **Current Task: Update Gangwon-do Detailed Information**
-*   [x] Add famous restaurants, cafes, landmarks, and activities for Gangwon-do in `data1.js`.
-*   [x] Ensure Google Maps search links are included for each item.
-*   [x] Maintain consistency with existing region data structures.
-*   [x] Fix syntax errors and structural inconsistencies across `data1.js`, `data2.js`, `data3.js`, and `data4.js`.
-*   [x] Normalize Google Maps links across all regions (ensure they match the name field).
-*   [x] Restore detailed country data (restaurants, cafes, landmarks, activities) in all data files.
+## **Current Task: Restore and Reformat Germany & Greece Data**
+*   [x] Reformat Germany and Greece sections in `data4.js` to be compact, matching the United Kingdom style.
+*   [x] Restore and update detailed region data (Bavaria, Berlin, Hamburg, Attica, Crete, etc.) with real information.
+*   [x] Fix syntax errors and redundant whitespace in `data4.js`.
+*   [x] Ensure all region names and themes are correctly displayed in the UI.
